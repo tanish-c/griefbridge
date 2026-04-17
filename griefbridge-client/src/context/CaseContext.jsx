@@ -22,6 +22,11 @@ export function CaseProvider({ children }) {
     }
   }, []);
 
+  // Fetch cases on component mount
+  useEffect(() => {
+    fetchCases();
+  }, [fetchCases]);
+
   const createCase = useCallback(async (caseData) => {
     try {
       const response = await axios.post(`${API_BASE_URL}/api/cases`, caseData);

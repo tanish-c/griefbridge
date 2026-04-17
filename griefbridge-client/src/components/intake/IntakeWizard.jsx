@@ -15,16 +15,16 @@ export default function IntakeWizard() {
     state: 'Delhi'
   });
   const [intakeAnswers, setIntakeAnswers] = useState({
-    is_govt_employee: false,
-    has_epf: false,
-    has_property: false,
-    has_insurance: false,
-    has_pension: false,
-    has_post_office: false,
-    has_vehicle: false,
-    is_taxpayer: false,
-    has_mutual_funds: false,
-    has_loans: false
+    is_govt_employee: null,
+    has_epf: null,
+    has_property: null,
+    has_insurance: null,
+    has_pension: null,
+    has_post_office: null,
+    has_vehicle: null,
+    is_taxpayer: null,
+    has_mutual_funds: null,
+    has_loans: null
   });
 
   const questions = [
@@ -49,6 +49,10 @@ export default function IntakeWizard() {
   const handleNext = () => {
     if (isPersonalInfo && !deceased[currentQuestion.key]) {
       alert('This field is required');
+      return;
+    }
+    if (!isPersonalInfo && intakeAnswers[currentQuestion.key] === null) {
+      alert('This question is required. Please select Yes or No.');
       return;
     }
     setStep(step + 1);
@@ -77,9 +81,8 @@ export default function IntakeWizard() {
     setDeceased({ ...deceased, [name]: value });
   };
 
-  const handleQuestionChange = (e) => {
-    const { checked } = e.target;
-    setIntakeAnswers({ ...intakeAnswers, [currentQuestion.key]: checked });
+  const handleQuestionChange = (value) => {
+    setIntakeAnswers({ ...intakeAnswers, [currentQuestion.key]: value });
   };
 
   return (
@@ -113,7 +116,7 @@ export default function IntakeWizard() {
             <input
               type="date"
               name={currentQuestion.key}
-              value={deceased.dateOfDeath || ''}
+              value={deceased[currentQuestion.key] || ''}
               onChange={handlePersonalInfoChange}
               className="form-control"
               autoFocus
@@ -135,14 +138,18 @@ export default function IntakeWizard() {
 
           {currentQuestion.type === 'radio' && (
             <div className="radio-group">
-              <label className="radio-label">
-                <input
-                  type="checkbox"
-                  checked={intakeAnswers[currentQuestion.key] || false}
-                  onChange={handleQuestionChange}
-                />
-                <span>Yes</span>
-              </label>
+              <button
+                className={`radio-button ${intakeAnswers[currentQuestion.key] === true ? 'active' : ''}`}
+                onClick={() => handleQuestionChange(true)}
+              >
+                Yes
+              </button>
+              <button
+                className={`radio-button ${intakeAnswers[currentQuestion.key] === false ? 'active' : ''}`}
+                onClick={() => handleQuestionChange(false)}
+              >
+                No
+              </button>
             </div>
           )}
         </motion.div>

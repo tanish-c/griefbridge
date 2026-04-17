@@ -5,13 +5,21 @@ import { getProcedureGuide, getAllProcedureGuides } from '../services/procedureG
 export async function createCase(req, res, next) {
   try {
     const { deceased, intakeAnswers } = req.body;
+    console.log('🔵 [createCase] Starting case creation for user:', req.userId);
 
     if (!deceased || !intakeAnswers) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
+    console.log('🔵 [createCase] Matching procedures...');
     const procedures = await matchProcedures(intakeAnswers, new Date(deceased.dateOfDeath));
+    console.log('🔵 [createCase] Procedures matched:', procedures.length);
 
+    if (!procedures || procedures.length === 0) {
+      return res.status(400).json({ error: 'No applicable procedures found for the provided information' });
+    }
+
+    console.log('🔵 [createCase] Creating case document...');
     const caseDoc = await Case.create({
       ownerId: req.userId,
       deceased: {
@@ -22,9 +30,11 @@ export async function createCase(req, res, next) {
       },
       procedures
     });
+    console.log('🔵 [createCase] Case created successfully:', caseDoc._id);
 
     res.status(201).json(caseDoc);
   } catch (error) {
+    console.error('❌ [createCase] Error:', error);
     next(error);
   }
 }
@@ -144,6 +154,10 @@ export async function getProcedureGuideDetails(req, res, next) {
     }
 
     const guide = getProcedureGuide(procedureId, caseDoc);
+    if (!guide) {
+      return res.status(404).json({ error: 'Procedure guide not found' });
+    }
+
     res.json({
       procedure,
       guide

@@ -13,6 +13,7 @@ import formsRoutes from './routes/forms.routes.js';
 import notificationsRoutes from './routes/notifications.routes.js';
 import rssRoutes from './routes/rss.routes.js';
 import experiencesRoutes from './routes/experiences.routes.js';
+import chatRoutes from './routes/chat.routes.js';
 import authMiddleware from './middleware/auth.middleware.js';
 import errorHandler from './middleware/error.middleware.js';
 import { startDeadlineChecker } from './jobs/deadlineChecker.job.js';
@@ -27,8 +28,12 @@ app.use(compress());
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
+
+// Parse multiple CORS origins from environment variable
+const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173').split(',').map(o => o.trim());
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  origin: corsOrigins,
   credentials: true
 }));
 
@@ -53,6 +58,7 @@ app.use('/api/cases', authMiddleware, casesRoutes);
 app.use('/api/documents', authMiddleware, documentsRoutes);
 app.use('/api/forms', authMiddleware, formsRoutes);
 app.use('/api/notifications', authMiddleware, notificationsRoutes);
+app.use('/api/chat', authMiddleware, chatRoutes);
 app.use('/api/experiences', experiencesRoutes);
 app.use('/api/rss', rssRoutes);
 

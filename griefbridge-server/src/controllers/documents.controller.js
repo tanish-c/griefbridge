@@ -25,9 +25,9 @@ export async function uploadDocument(req, res, next) {
     if (caseDoc) {
       for (const proc of caseDoc.procedures) {
         if (proc.requiredDocTypes && proc.requiredDocTypes.includes(documentType)) {
-          if (!proc.associatedProcedures) proc.associatedProcedures = [];
-          if (!proc.associatedProcedures.includes(proc.procedureId)) {
-            proc.requiredDocTypes.push(proc.procedureId);
+          if (!proc.associatedDocuments) proc.associatedDocuments = [];
+          if (!proc.associatedDocuments.includes(docId)) {
+            proc.associatedDocuments.push(docId);
           }
         }
       }

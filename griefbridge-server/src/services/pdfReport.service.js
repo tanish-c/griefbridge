@@ -29,6 +29,8 @@ class PdfReportService {
   /**
    * Generate comprehensive case report
    */
+  async generateReport(caseId, caseData) {
+    const {
       deceased,
       procedures,
       documents,

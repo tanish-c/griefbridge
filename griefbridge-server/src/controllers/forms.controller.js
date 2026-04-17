@@ -115,7 +115,7 @@ export async function generatePrefilledForm(req, res, next) {
     // Add owner data if available
     const caseDataWithOwner = {
       ...caseDoc,
-      owner: req.user // Add current user as owner
+      owner: req.userId // Add current user ID as owner
     };
 
     const pdfBuffer = await formPreFillerService.generateFilledPdf(

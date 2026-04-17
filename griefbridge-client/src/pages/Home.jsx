@@ -102,7 +102,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 GriefBridge. A project for ITTC 601 - Web Technology.</p>
+          <p>&copy; 2026 GriefBridge. A project for ITTC 601 - Web Technology.</p>
         </div>
       </footer>
     </div>

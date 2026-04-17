@@ -1,690 +1,1202 @@
 {
   "DEATH_CERT": {
-    "summary": "The Death Certificate is an official legal document issued by the Municipal Corporation certifying the death of a person. It is the foundation document for most post-bereavement procedures and is mandatory for inheritance and asset transfer.",
-    "what": "A Death Certificate is an official record issued by the local municipal authority (Nagar Nigam/Municipal Corporation) confirming the death of a person with specific details like date, time, place, and cause of death. This document is legally required for all inheritance, succession, and asset transfer processes.",
+    "summary": "Official legal document certifying death - foundation for all post-bereavement procedures",
+    "what": "A Death Certificate is an official record issued by the municipal authority confirming death with details like date, time, place, and cause.",
     "statefulGuide": {
       "default": {
-        "where": "Contact your local Municipal Corporation or Local Body office in the jurisdiction where the death occurred. Visit the Civil Registration Department.",
+        "where": "Local Municipal Corporation / Civil Registration Department",
         "how": [
-          "Visit the Municipal Corporation office (within 21 days of death for registration)",
-          "Collect Form No. 101 (Application for registration of death)",
-          "Attach original or attested copy (hospital report, doctor's certificate, or police FIR)",
-          "Provide ID proof of the informant (Aadhar, PAN, Voter ID)",
-          "Submit the completed form with supporting documents",
-          "Pay the registration fee (usually ₹0-100 depending on the state)",
-          "Receive acknowledgment and collect the Death Certificate (usually available within 7-10 days)"
+          "Apply within 21 days of death",
+          "Submit hospital/medical report",
+          "Provide ID proof",
+          "Pay fee (₹0-100)",
+          "Collect within 7-10 days"
         ],
         "processingTime": "7-10 days",
         "cost": "Free to ₹100",
-        "documents": ["Hospital Report or Death Records", "Aadhar/PAN/Voter ID of Informant", "Ration Card or Address Proof"],
+        "documents": [
+          "Hospital Report",
+          "Aadhar/PAN/Voter ID"
+        ],
         "website": "https://crsorgi.gov.in/"
-      },
-      "Delhi": {
-        "where": "East Delhi Municipal Corporation (EDMC), North Delhi Municipal Corporation (NDMC), South Delhi Municipal Corporation (SDMC), or New Delhi Municipal Council (NDMC) - depending on area of residence",
-        "how": [
-          "Visit the respective Municipal Corporation office or online portal (NCRB website)",
-          "Download and fill Form No. 101-102",
-          "Obtain hospital death report or medical certificate",
-          "Submit documents along with identity proof",
-          "Pay registration fee (Free in Delhi)",
-          "Collect Death Certificate or download from online portal"
-        ],
-        "processingTime": "3-7 days",
-        "cost": "Free",
-        "website": "https://ncrb.gov.in/ or respective Municipal Corporation website",
-        "contacts": [
-          "EDMC Civil Registration: 011-4109-1111",
-          "SDMC Civil Registration: 011-2671-0850",
-          "Online: https://igris.delhi.gov.in"
-        ]
-      },
-      "Maharashtra": {
-        "where": "Municipal Corporation or Gram Panchayat office in the jurisdiction of death. In Mumbai, contact BMC (Brihanmumbai Municipal Corporation).",
-        "how": [
-          "Visit the local Municipal office with death intimation",
-          "File Form No. 101 (for registration within 30 days)",
-          "Submit hospital report or doctor's certificate",
-          "Bring identity proof and address proof",
-          "Pay fee (₹50-100 as per municipal rules)",
-          "Receive the registered Death Certificate"
-        ],
-        "processingTime": "10-15 days",
-        "cost": "₹50-100",
-        "website": "https://igrisbmc.maharashtra.gov.in/",
-        "contacts": ["BMC Civil Registration: 022-2305-2777"]
       }
     },
-    "requiredDocuments": {
-      "always": ["Hospital Report/Medical Certificate of Death", "Aadhar/PAN/Voter ID"],
-      "sometimes": ["Ration Card", "Driving License", "Passport", "Police FIR (if death in custody)"]
-    },
-    "legalImportance": "Death Certificate is a fundamental document required for all succession matters, insurance claims, bank account closure, property transfer, pension claims, and other financial settlements.",
-    "challenges": "Delays in municipal offices during peak times; may need multiple visits if documents are incomplete; varies significantly by state",
-    "tips": "Register death certificate within 21 days for normal registration and ₹100-500 late fee within 1 year. After 1 year, district magistrate's permission is required. Get multiple authenticated copies (at least 5-10)."
+    "legalImportance": "Mandatory for all inheritance, insurance claims, and financial settlements",
+    "challenges": "Delays in peak times, may need multiple visits if documents incomplete",
+    "tips": "Register within 21 days for normal registration. Get 5-10 authenticated copies."
   },
   "SUCCESSION_CERT": {
-    "summary": "A Succession Certificate is a legal document issued by the State Revenue Department that establishes the rightful heir to the deceased's property and assets. It is essential for transferring immovable property and proving inheritance rights.",
-    "what": "A Succession Certificate is a court-issued document that identifies the legal heirs of the deceased and establishes their right to inherit the deceased's estate. It serves as proof of heirship and is used for transferring property, accessing lockers, and settling the deceased's affairs.",
+    "summary": "Court-issued document establishing rightful heirs to the deceased's property",
+    "what": "Succession Certificate identifies legal heirs and establishes inheritance rights",
     "statefulGuide": {
       "default": {
-        "where": "District Revenue Department or Sub-Registrar's office in the district where the property is located",
+        "where": "District Revenue Department / Sub-Registrar's Office",
         "how": [
-          "Prepare an application for Succession Certificate with details of heirs",
-          "Provide affidavit from the informant (usually the eldest heir)",
-          "Get death certificate authenticated",
-          "Provide property documents and details of assets",
-          "Submit Form with property details and family tree",
-          "Pay application fee (typically ₹500-1000)",
-          "Attend district office for verification and processing",
-          "Receive Succession Certificate (usually in 30-60 days)"
+          "Prepare application with heir details",
+          "Provide death certificate",
+          "Submit family tree and property details",
+          "Pay fee (₹500-1000)",
+          "Wait for processing (30-60 days)"
         ],
         "processingTime": "30-60 days",
-        "cost": "₹500-1500 (varies by state and property value)",
-        "documents": ["Death Certificate", "Property Documents", "ID proofs of heirs", "Affidavit"],
-        "website": "https://revenue.ap.gov.in/ (state-specific)"
-      },
-      "Delhi": {
-        "where": "Revenue Office of the concerned district (North, South, East, West) or District Registrar's Office",
-        "how": [
-          "File petition in District Court with affidavit",
-          "Provide certified copy of Death Certificate",
-          "List all heirs with their relationship and share",
-          "Submit property schedule",
-          "Pay court fee based on property value",
-          "Court issues Succession Certificate after hearing"
-        ],
-        "processingTime": "60-90 days",
-        "cost": "₹500-2000 plus court fees based on property value",
-        "website": "https://districtcourts.delhi.nic.in/",
-        "contacts": ["District Court: 011-2320-4590"]
-      },
-      "Maharashtra": {
-        "where": "District Court or Revenue Taluka Office",
-        "how": [
-          "Petition to District Court with heirs listed",
-          "Attach death certificate and property documents",
-          "Pay court fee as per Indian Court Fees Act",
-          "Court verification and notice to heirs",
-          "Succession Certificate issued by court"
-        ],
-        "processingTime": "45-75 days",
-        "cost": "₹1000-3000 based on property value",
-        "website": "https://districts.ecourts.gov.in/"
+        "cost": "₹500-1500",
+        "documents": [
+          "Death Certificate",
+          "Property Documents",
+          "Affidavit",
+          "ID proofs"
+        ]
       }
     },
-    "applicableScenarios": {
-      "has_property": true,
-      "is_govt_employee": "sometimes"
-    },
-    "requiredDocuments": {
-      "always": ["Death Certificate", "Property Documents", "ID Proofs of Heirs", "Affidavit of Heirship"],
-      "sometimes": ["Will (if exists)", "Family Tree Document", "Address Proof"]
-    },
-    "legalImportance": "Succession Certificate is legally required in most states to transfer immovable property, access bank lockers, and prove heirship in inheritance matters.",
-    "challenges": "Court procedures can be time-consuming; may require multiple hearings; different procedures in different states; expensive court fees",
-    "tips": "Prepare accurate family tree and heir details beforehand; engage a lawyer for smooth processing; ensure all heirs are properly documented; get certified copies."
+    "legalImportance": "Essential for property transfer and proving inheritance rights",
+    "challenges": "Time-consuming process, requires accurate documentation",
+    "tips": "Prepare family tree clearly. Keep all property documents ready."
   },
   "EPF_FORM_20": {
-    "summary": "EPF Form 20 is used to claim the Employee Provident Fund balance after the account holder's death. This form allows the nominee to withdraw the accumulated EPF amount.",
-    "what": "EPF Form 20 is the official form filed with the Employees' Provident Fund Organisation (EPFO) to claim the provident fund balance of the deceased employee. The nominee or legal heir can withdraw the accumulated balance and interest.",
+    "summary": "Employee Provident Fund death claim form for nominee withdrawal",
+    "what": "Form 20 used to claim EPF balance as nominee after employee's death",
     "statefulGuide": {
       "default": {
-        "where": "EPFO Regional Office or Sub-Office of the area where the employee was working",
+        "where": "EPFO Office or Online at epfoservices.gov.in",
         "how": [
-          "Obtain EPF member's UAN and password details",
-          "Download Form 20-1 (Claim form) and Form 20 from EPFO website",
-          "Fill nominee/heir details and deceased's details",
-          "Attach Death Certificate (attested copy)",
-          "Attach Aadhaar or ID proof of nominee",
-          "Submit at EPFO office or upload online via UMANG app",
-          "Provide bank account details for fund transfer",
-          "EPFO processes and credits amount (usually 15-30 days)"
+          "Fill Form 20 (Death Claim)",
+          "Attach death certificate",
+          "Provide nominee Aadhar",
+          "Submit with EPF documents",
+          "Wait for verification and transfer"
         ],
-        "processingTime": "15-30 days",
+        "processingTime": "30-45 days",
         "cost": "Free",
-        "documents": ["Death Certificate", "Aadhaar/PAN of Nominee", "Bank Passbook"],
-        "website": "https://www.epfindia.gov.in/ or UMANG app"
-      },
-      "Delhi": {
-        "where": "EPFO Regional Office, Delhi or nearest Sub-Office",
-        "how": [
-          "Download Form 20 from epfindia.gov.in or UMANG app",
-          "Verify UAN number through epfindia.gov.in",
-          "Complete form with all nominee details",
-          "Submit with required documents to EPFO office",
-          "Claim processing through online portal",
-          "Fund transferred to nominee's bank account"
-        ],
-        "processingTime": "20-25 days",
-        "cost": "Free",
-        "website": "https://www.epfindia.gov.in/",
-        "contacts": ["EPFO Delhi Regional Office: 011-2141-9555", "Umang App: Download from Play Store"]
-      },
-      "Maharashtra": {
-        "where": "EPFO Office in Mumbai or concerned city",
-        "how": [
-          "Obtain UAN from EPF passbook or employer",
-          "File Form 20 online via UMANG or EPFO portal",
-          "Upload Death Certificate and ID proof",
-          "Nominee needs to authenticate via OTP",
-          "EPFO approves and transfers funds"
-        ],
-        "processingTime": "15-20 days",
-        "cost": "Free",
-        "website": "https://www.epfindia.gov.in/"
+        "documents": [
+          "Death Certificate",
+          "Nominee Aadhar",
+          "EPF Account Details",
+          "Bank Account Proof"
+        ]
       }
     },
-    "applicableScenarios": {
-      "has_epf": true,
-      "is_govt_employee": false
-    },
-    "requiredDocuments": {
-      "always": ["Death Certificate (SPC or LCD)", "Aadhaar/PAN of Nominee", "UAN card", "Bank Account Details"],
-      "sometimes": ["Succession Certificate", "Court decree"]
-    },
-    "legalImportance": "EPF withdrawal is a key source of financial relief for the family after death. The amount can be substantial depending on the employee's service period and contributions.",
-    "challenges": "Delays in EPFO processing; may require multiple documents; nominee needs to be updated in EPF records",
-    "tips": "Ensure nominee details are updated in EPF records; use online portal for faster processing; keep UAN number handy; provide correct bank details to avoid delays."
+    "legalImportance": "Critical for accessing deceased's EPF savings",
+    "challenges": "Verification delays, may require multiple submissions",
+    "tips": "Ensure nominee details match Aadhar. Keep EPF passbook handy."
   },
   "BANK_TRANSFER": {
-    "summary": "Bank Account Transfer/Closure is the process of transferring the deceased account holder's balance to the nominee or closing the account. This must be done shortly after death.",
-    "what": "After a person's death, their bank account must be transferred to the nominee (if designated) or closed. The money is transferred to the nominee's account if nominated, otherwise processed through legal heirs.",
+    "summary": "Transfer or close bank account and settle balance to nominee",
+    "what": "Process to transfer bank account balances and access to nominee or close account",
     "statefulGuide": {
       "default": {
-        "where": "The branch of the bank where the deceased's account was maintained",
+        "where": "Deceased's Bank Branch",
         "how": [
-          "Contact the bank and inform about account holder's death",
-          "Request bank to freeze the account to prevent unauthorized transactions",
-          "Provide Death Certificate (attested copy) to the bank",
-          "If nominee is registered, nominee visits bank with ID proof",
-          "Bank verifies nominee details from their records",
-          "Nominee signs transfer documents",
-          "Bank transfers balance to nominee's designated account (usually within 15-20 days)",
-          "If no nominee: apply for succession certificate and follow legal heir process"
+          "Contact bank with death certificate",
+          "Submit succession certificate",
+          "Provide nominee's bank account",
+          "Complete transfer formalities",
+          "Balance transferred within 7-14 days"
         ],
-        "processingTime": "15-20 days (with nominee), 30-60 days (without nominee)",
-        "cost": "Free (no charges for nominee transfer)",
-        "documents": ["Death Certificate", "Nominee ID proof", "Bank passbook"]
-      },
-      "Delhi": {
-        "where": "Bank branch where account was held",
-        "how": [
-          "Nominee submits Death Certificate and ID proof to branch",
-          "Bank provides claim form to be filled",
-          "Nominee fills form and signs",
-          "Bank processes and transfers funds",
-          "Approval typically within 10-15 days"
-        ],
-        "processingTime": "10-15 days",
+        "processingTime": "7-14 days",
         "cost": "Free",
-        "banks": "SBI, HDFC, ICICI, Axis, etc. (procedures vary slightly)"
-      },
-      "Maharashtra": {
-        "where": "Bank branch in Mumbai or concerned city",
-        "how": [
-          "Nominee approaches bank with Death Certificate",
-          "Submit bank account number and nominee ID",
-          "Bank sends cheque or transfers digitally to nominee's account",
-          "Processing time: 15-20 days"
-        ],
-        "processingTime": "15-20 days",
-        "cost": "Free"
+        "documents": [
+          "Death Certificate",
+          "Successor Cert",
+          "Bank Passbook",
+          "Nominee's ID and Bank Account"
+        ]
       }
     },
-    "requirementVector": {
-      "all": true
-    },
-    "requiredDocuments": {
-      "always": ["Death Certificate", "Bank Passbook", "ID Proof (Aadhar/PAN/Voter ID)"],
-      "ifNoNominee": ["Succession Certificate", "Court decree", "Copy of Will"]
-    },
-    "legalImportance": "Necessary to access funds and prevent account fraud. Banks require this to comply with RBI regulations.",
-    "challenges": "May require multiple visits to bank; some private banks may be slower; if no nominee, succession process can take months",
-    "tips": "Inform bank immediately after death; ensure nominee name is registered; keep bank passbook safe; request written confirmation of transfer."
+    "legalImportance": "Essential for accessing and settling financial assets",
+    "challenges": "Bank delays, may require multiple visits",
+    "tips": "Contact multiple banks if deceased had accounts in different branches. Keep transaction statements."
   },
   "INSURANCE_CLAIM": {
-    "summary": "Life Insurance Death Claim is the process of filing a claim with the insurance company to receive the policy payout after the insured person's death.",
-    "what": "A life insurance death claim is filed with the insurance company by the nominee to receive the insurance policy payout. This is usually the quickest source of financial relief after death.",
+    "summary": "File death claim with life insurance company for policy payout",
+    "what": "Process to claim insurance policy benefits after death",
     "statefulGuide": {
       "default": {
-        "where": "Insurance company's local office or through their website/customer service hotline",
+        "where": "Insurance Office or Online Portal",
         "how": [
-          "Locate the insurance policy document and policy number",
-          "Contact the insurance company by phone or visit their office",
-          "Request claim form (usually provided by insurance company)",
-          "Nominee fills the claim form with personal details",
-          "Attach original or attested Death Certificate",
-          "Provide policy document and ID proof of nominee",
-          "Submit all documents to insurance company",
-          "Insurance company processes claim (usually 15-30 days)",
-          "Funds disbursed to nominee's nominated bank account"
+          "Contact insurance company",
+          "Submit death certificate",
+          "Provide policy documents",
+          "File claim form",
+          "Claim processed (typically 14-30 days)"
         ],
-        "processingTime": "15-30 days (can be up to 60 days for investigation)",
-        "cost": "Free (no claim processing charges)",
-        "documents": ["Policy Document", "Death Certificate", "ID proof of nominee", "Bank account details"]
-      },
-      "allStates": {
-        "channelsAvailable": [
-          "Direct insurance company office",
-          "Online claim filing via insurance company website",
-          "Through insurance agent",
-          "Via post/courier"
-        ],
-        "documentation": [
-          "Original insurance policy",
-          "Death Certificate (within 5 years of death)",
-          "Nominee ID proof and address proof",
-          "Claim form duly signed by nominee",
-          "Bank passbook/account details"
-        ],
-        "specialCases": "For ambiguous/suspicious death: Insurance company may conduct investigation and require medical report or police inquiry details"
+        "processingTime": "14-30 days",
+        "cost": "Free",
+        "documents": [
+          "Death Certificate",
+          "Policy Document",
+          "Nominee's ID",
+          "Medical Report (if required)"
+        ]
       }
     },
-    "applicableScenarios": {
-      "has_insurance": true
-    },
-    "requiredDocuments": {
-      "always": ["Insurance Policy", "Death Certificate", "ID proof of Nominee", "Nominee's Bank Account Details"],
-      "sometimes": ["Medical report", "Police FIR (if accidental death)", "Post-mortem report"]
-    },
-    "legalImportance": "Insurance claims provide immediate financial relief to the family. Most life insurance policies have nominee provisions.",
-    "majorInsurers": [
-      "Life Insurance Corporation (LIC) - https://www.licindia.in/",
-      "HDFC Life - https://www.hdfclife.com/",
-      "ICICI Prudential - https://www.iciciprulife.com/",
-      "Max Life - https://www.maxlifeinsurance.com/",
-      "Bajaj Allianz - https://www.bajajallianz.com/"
-    ],
-    "challenges": "Insurance company may delay for investigation; nominee needs to be properly registered; some policies may have exclusions",
-    "tips": "File claim immediately after death; keep policy document safe; ensure nominee details are current; compile all documents before filing claim."
+    "legalImportance": "Critical for accessing insurance benefits",
+    "challenges": "Claims denial if paperwork incomplete, medical verification delays",
+    "tips": "File claim immediately. Keep policy document safe. Gather all death documents beforehand."
   },
   "PROPERTY_MUTATION": {
-    "summary": "Property Mutation is the process of recording the transfer of property ownership in revenue records after the owner's death. It updates the government records to reflect the new owner.",
-    "what": "Property Mutation is the official process of updating revenue records to transfer the ownership of immovable property from the deceased to their legal heir. This creates a new entry in the revenue department records showing the heir as the new owner.",
+    "summary": "Transfer property ownership in revenue records to heir",
+    "what": "Official transfer of property title in government revenue records",
     "statefulGuide": {
       "default": {
-        "where": "Taluka Revenue Office (Tehsil) or District Revenue Department in the jurisdiction where the property is located",
+        "where": "Revenue Department / Taluk Office",
         "how": [
-          "Collect property documents and establish heirship",
-          "Obtain Succession Certificate or court order establishing heirship",
-          "Prepare mutation application (usually on plain paper or prescribed form)",
-          "Attach certified copies of Death Certificate and Succession Certificate",
-          "Include property documents (sale deed, khata, map)",
-          "Submit to Revenue Taluka with appropriate fee (₹100-500)",
-          "Tahsildar/Revenue Officer verifies documents",
-          "Public notice is issued (usually 30 days for objections)",
-          "After objection period, mutation is approved",
-          "New entry created in revenue records with heir's name",
-          "Mutation certificate issued (processing: 2-4 months)"
+          "Apply with succession certificate",
+          "Submit property documents",
+          "Provide heir's details",
+          "Pay mutation fees",
+          "Receive updated property records"
         ],
-        "processingTime": "60-120 days (including objection period)",
-        "cost": "₹100-500 (stamp duty and fees vary by state and property value)",
-        "documents": ["Death Certificate", "Succession Certificate", "Property Documents", "Application Form"],
-        "website": "https://revenue.ap.gov.in/ (state-specific)"
-      },
-      "Delhi": {
-        "where": "District Revenue Office or Tehsil Office of the concerned district",
-        "how": [
-          "Apply with Succession Certificate and Death Certificate",
-          "Submit to District Revenue Office",
-          "Revenue Officer verifies ownership and inheritance",
-          "Mutation approved and new entry created",
-          "Cost: ₹200-400, Processing: 30-45 days"
-        ],
-        "processingTime": "30-45 days",
-        "cost": "₹200-400",
-        "website": "https://dda.org.in/ or Revenue Office website"
-      },
-      "Maharashtra": {
-        "where": "Gram Sevak/Taluka Office (rural), Municipal Corporation (urban)",
-        "how": [
-          "Filed by heir with succession proof",
-          "Documents: Death certificate, Succession Certificate, Land Records",
-          "Seven-day public notice period",
-          "After verification, mutation entry created",
-          "Processing time: 45-60 days",
-          "Fee: ₹100-500 + stamp duty"
-        ],
-        "processingTime": "45-60 days",
-        "cost": "₹100-500 + stamp duty"
+        "processingTime": "60-90 days",
+        "cost": "₹500-2000 (varies by state)",
+        "documents": [
+          "Death Cert",
+          "Succession Cert",
+          "Property Docs",
+          "ID Proof of Heir"
+        ]
       }
     },
-    "applicableScenarios": {
-      "has_property": true,
-      "dependencies": ["SUCCESSION_CERT"]
-    },
-    "requiredDocuments": {
-      "always": ["Death Certificate", "Succession Certificate", "Property Documents (Sale Deed, Khata)", "Applicant ID proof"],
-      "sometimes": ["Will", "Court decree", "Partition deed"]
-    },
-    "legalImportance": "Mutation is mandatory for property transfer and is essential for future sales, mortgages, or disputes. It ensures clear title to the property.",
-    "challenges": "Long processing time; public notice period can lead to objections; requires accurate property identification; may need multiple visits to revenue office",
-    "tips": "Ensure Succession Certificate is obtained first; prepare accurate property documents beforehand; monitor mutation application status regularly; keep copies of all submissions."
+    "legalImportance": "Essential for establishing legal ownership of property",
+    "challenges": "Long processing time, bureaucratic delays, may require multiple visits",
+    "tips": "Apply early to avoid property disputes. Hire advocate if needed. Keep receipts of all fees paid."
   },
   "PENSION_TRANSFER": {
-    "summary": "Pension Transfer is the process of converting the deceased government employee's pension to family pension for eligible dependents. This ensures continued financial support for the family.",
-    "what": "For government employees, after death, the pension is transferred from the employee's account to the spouse or eligible dependent's account as family pension. This requires canceling the employee's pension and activating family pension.",
+    "summary": "Convert deceased employee's pension to family pension",
+    "what": "Process to transfer government employee pension to family",
     "statefulGuide": {
       "default": {
-        "where": "Pension Authority or Treasury Department where the deceased was drawing pension (usually within 30 days of death)",
+        "where": "Treasury Department / Pension Disbursing Office",
         "how": [
-          "Obtain death certificate of the deceased government employee",
-          "Get family pension application form from Pension Authority",
-          "Identify eligible family member (usually spouse, then children)",
-          "Provide employment details and pension account information",
-          "Attach Death Certificate and ID proof of eligible family member",
-          "Provide bank account details for pension transfer",
-          "Submit to Pension Authority/Treasury",
-          "Pension Authority processes (usually 15-20 days)",
-          "Pension is stopped for deceased and activated for eligible family member"
+          "Submit death certificate",
+          "Provide pension details",
+          "File family pension application",
+          "Get verified and approved",
+          "Family pension activated"
         ],
-        "processingTime": "15-20 days",
+        "processingTime": "30-45 days",
         "cost": "Free",
-        "documents": ["Death Certificate", "Employment documents", "ID proof of eligible family member", "Bank Account details"]
-      },
-      "Delhi": {
-        "where": "Treasury Office or Pension Authority, Delhi",
-        "how": [
-          "Submit family pension application to Treasury within 30 days",
-          "Provide death certificate and family details",
-          "Process through Treasury: 20-30 days",
-          "Family pension transferred to eligible member's account"
-        ],
-        "processingTime": "20-30 days",
-        "cost": "Free",
-        "website": "https://etreasury.delhi.gov.in/"
-      },
-      "Maharashtra": {
-        "where": "Treasury office or Pension Authority, Maharashtra",
-        "how": [
-          "File application with Succession certificate",
-          "Death certificate and employment details required",
-          "Family pension activated for eligible dependent",
-          "Processing: 20-25 days"
-        ],
-        "processingTime": "20-25 days",
-        "cost": "Free"
+        "documents": [
+          "Death Certificate",
+          "Pension Book",
+          "Family Tree",
+          "ID Proof"
+        ]
       }
     },
-    "applicableScenarios": {
-      "is_govt_employee": true,
-      "has_pension": true
-    },
-    "eligibilityForFamilyPension": [
-      "Spouse (widow/widower) - up to remarriage",
-      "Dependent children - up to age 25 (or 28 if studying)",
-      "Parents - if dependent",
-      "Grandchildren - in certain cases"
-    ],
-    "requiredDocuments": {
-      "always": ["Death Certificate", "Govt. Service Book or Employment Certificate", "ID proof of eligible family member", "Marriage Certificate (if spouse)"],
-      "sometimes": ["Birth Certificate of children", "Educational certificates for dependent children"]
-    },
-    "legalImportance": "Family pension provides continuing financial security to dependent family members as per Pension Rules.",
-    "challenges": "Strict 30-day deadline for application; complicated eligibility criteria; may require multiple documents to prove eligibility",
-    "tips": "Apply immediately within 30 days of death; prepare all family documents in advance; ensure eligible member's bank account is linked; track application status with Treasury."
+    "legalImportance": "Ensures continued financial support for family",
+    "challenges": "Verification delays, requires accurate documentation",
+    "tips": "Submit immediately after death. Keep pension account updated. Inform all beneficiaries."
   },
   "VEHICLE_TRANSFER": {
-    "summary": "Vehicle RC Transfer is the process of transferring the registration of a vehicle from the deceased owner to the heir. This must be done at the RTO.",
-    "what": "Vehicle RC Transfer is the process of updating the Road Transport Office (RTO) records to transfer the vehicle's ownership from the deceased to the legal heir. The heir's name is registered as the new vehicle owner.",
+    "summary": "Transfer vehicle registration to heir through RTO",
+    "what": "Process to officially transfer vehicle ownership in RC",
     "statefulGuide": {
       "default": {
-        "where": "Regional Transport Office (RTO) or Road Transport Authority in the jurisdiction where the vehicle is registered",
+        "where": "RTO - Road Transport Office",
         "how": [
-          "Obtain Death Certificate of vehicle owner",
-          "Collect and verify vehicle RC (Registration Certificate)",
-          "Prepare succession certificate or court decree establishing heirship (if property involved)",
-          "For simple vehicle transfer: Death Certificate + heir ID proof may suffice in some states",
-          "Submit application form at RTO with all documents",
-          "Get vehicle inspected at RTO (generally required)",
-          "Pay transfer fee (₹200-500 depending on vehicle type and state)",
-          "RTO approves and issues new RC in heir's name",
-          "New Registration Certificate issued (processing: 15-30 days)"
+          "Apply with death certificate",
+          "Submit vehicle documents",
+          "Provide heir's details",
+          "Get vehicle inspected",
+          "RC transferred"
         ],
-        "processingTime": "15-30 days",
-        "cost": "₹200-500 (varies by state and vehicle type)",
-        "documents": ["Death Certificate", "RC (Original/Certified copy)", "ID proof of heir", "Address proof"]
-      },
-      "Delhi": {
-        "where": "Regional Transport Office (RTO), Delhi or vahan.nic.in online portal",
-        "how": [
-          "Log into vahan.nic.in with vehicle details",
-          "File transfer application online or offline at RTO",
-          "Submit Death Certificate and heir ID proof",
-          "Pay fee through online portal",
-          "Vehicle inspection may be required",
-          "New RC issued in heir's name (10-15 days)"
-        ],
-        "processingTime": "10-15 days",
-        "cost": "₹200-300",
-        "website": "https://vahan.nic.in/",
-        "contacts": ["RTO helpline: 1800-111-265"]
-      },
-      "Maharashtra": {
-        "where": "Regional Transport Office in concerned district",
-        "how": [
-          "Submit documents at RTO counter",
-          "Fill transfer application form",
-          "Pay transfer fee",
-          "Vehicle inspection conducted",
-          "New RC printed and issued (15-20 days)"
-        ],
-        "processingTime": "15-20 days",
-        "cost": "₹200-400"
+        "processingTime": "30-45 days",
+        "cost": "₹500-1500 (varies by state)",
+        "documents": [
+          "Death Cert",
+          "RC",
+          "Insurance Papers",
+          "Heir's ID"
+        ]
       }
     },
-    "applicableScenarios": {
-      "has_vehicle": true
-    },
-    "requiredDocuments": {
-      "always": ["Death Certificate", "RC (Original or Certified Copy)", "ID proof of new owner", "Address proof", "Pollution Certificate (if required)"],
-      "sometimes": ["Insurance papers", "Tax payment receipt"]
-    },
-    "vehicleTypes": "Applies to cars, motorcycles, commercial vehicles, etc.",
-    "legalImportance": "Necessary to establish legal ownership; prevents liability issues; required for insurance claims or resale.",
-    "challenges": "RTO offices may be slow; vehicle inspection can cause delays; documentation requirements vary by state; may need insurance renewal",
-    "tips": "Ensure RC is original and clear; complete vehicle inspection before applying; use Vahan portal for online tracking; keep photographs of vehicle; update pollution certificate if required."
+    "legalImportance": "Mandatory for legal use and insurance of vehicle",
+    "challenges": "RTO procedures vary by state, inspection requirements",
+    "tips": "Ensure vehicle is roadworthy. Keep insurance current during transfer. Get new registration certificate."
   },
   "IT_FINAL_RETURN": {
-    "summary": "Final Income Tax Return Filing is filing the last income tax return for the deceased person with the Income Tax Department. It's required if the deceased had taxable income.",
-    "what": "Final Income Tax Return (ITR) is filed for the deceased person for the financial year of death and any previous year(s) where return was due. This settles tax obligations and enables the heir to obtain a legal heir certificate.",
+    "summary": "File final income tax return for deceased and obtain legal heir certificate",
+    "what": "Final ITR requirements and legal heir documentation for taxpayers",
     "statefulGuide": {
       "default": {
-        "where": "Income Tax Department office or online via e-filing portal (https://www.incometaxindia.gov.in/)",
+        "where": "Income Tax Department / CPA",
         "how": [
-          "Collect PAN card and previous ITR documents",
-          "Calculate income up to date of death",
-          "Prepare ITR form (ITR-1, ITR-2, ITR-3 depending on income type)",
-          "Legal heir or authorized representative files on Form No. 120",
-          "Attach Death Certificate with application",
-          "Provide details of income, deductions, investments",
-          "File online or offline through Chartered Accountant",
-          "Submit ITR along with Death Certificate",
-          "I-T Department processes and issues legal heir certificate (usually 30-45 days)"
+          "Gather tax documents",
+          "Calculate final income",
+          "File ITR-4(or relevant form)",
+          "Obtain ITR acknowledgment",
+          "Get legal heir certificate"
         ],
-        "processingTime": "30-45 days",
-        "cost": "Free (no filing fee)",
-        "documents": ["PAN card", "Death Certificate", "Bank statements", "Investment documents"]
-      },
-      "Delhi": {
-        "where": "Income Tax e-filing portal or Local Income Tax Office",
-        "how": [
-          "File final ITR online via https://www.incometaxindia.gov.in/",
-          "Use Form 120 (Declaration) for ITR filing by heir",
-          "Attach scanned Death Certificate",
-          "Submit proof of income: Salary certificate, bank statements",
-          "Legal heir certificate issued after processing (30 days)"
-        ],
-        "processingTime": "30 days",
-        "cost": "Free",
-        "website": "https://www.incometaxindia.gov.in/"
-      },
-      "Maharashtra": {
-        "where": "Income Tax portal or local I-T office",
-        "how": [
-          "File final ITR through e-portal",
-          "Attach required documents",
-          "Legal heir certificate issued after verification",
-          "Processing time: 30-45 days"
-        ],
-        "processingTime": "30-45 days",
-        "cost": "Free"
+        "processingTime": "45-60 days",
+        "cost": "₹500-2000 (if using CA)",
+        "documents": [
+          "Death Cert",
+          "PAN Card",
+          "Tax Records",
+          "Bank Statements"
+        ]
       }
     },
-    "applicableScenarios": {
-      "is_taxpayer": true
-    },
-    "requiredDocuments": {
-      "always": ["PAN card", "Death Certificate", "Form 120 (Declaration by heir)", "Bank account statements", "Investment proofs"],
-      "sometimes": ["Salary certificates", "Business income records", "Property sale/rental documents"]
-    },
-    "legalImportance": "Final ITR and legal heir certificate are required for:1. Succession Certificate proceedings2. Property transfer3. Bank account closure4. Insurance claims",
-    "challenges": "Requires computation of income to date of death; may involve multiple years' filings; can be complex if business income involved",
-    "tips": "Engage a Chartered Accountant for accuracy; file within specified time limit; keep all income documents organized; get legal heir certificate from I-T Department."
+    "legalImportance": "Required for property transfer and tax clearance",
+    "challenges": "Complex documentation, may require CA assistance",
+    "tips": "Use registered CA to file ITR. Keep all tax documents organized. File within deadline."
   },
   "POST_OFFICE_TRANSFER": {
-    "summary": "Post Office Savings Transfer is the process of transferring NSC (National Savings Certificate), KVP (Kisan Vikas Patra), and SB-83 accounts from the deceased to the nominee.",
-    "what": "Post office savings schemes like NSC, KVP, and SB-83 can be transferred to the nominee or legal heir after the owner's death. The amount accumulated with interest is transferred.",
+    "summary": "Transfer NSC, KVP, and savings accounts at post office",
+    "what": "Process to transfer post office savings schemes and accounts",
     "statefulGuide": {
       "default": {
-        "where": "Post Office (branch where account was held) or Department of Posts",
+        "where": "Home Post Office or Postal Branch",
         "how": [
-          "Obtain certificate/receipt of NSC, KVP, or SB-83 account",
-          "Visit the post office with Death Certificate",
-          "Provide original or certified copy of Death Certificate",
-          "Nominee or heir submits transfer application",
-          "Post office verifies documents and account details",
-          "Amount is transferred to nominee's designated account or new post office account",
-          "Processing: usually 15-20 days",
-          "Nominee receives account and accumulated amount with interest"
+          "Get death certificate notarized",
+          "Submit succession document",
+          "Provide nominee details",
+          "Post office processes transfer",
+          "Balance transferred"
         ],
-        "processingTime": "15-20 days",
-        "cost": "Free (no transfer charges)",
-        "documents": ["Death Certificate", "NSC/KVP certificates", "ID proof of nominee", "Bank account details"]
-      },
-      "allStates": {
-        "schemesIncluded": [
-          "National Savings Certificate (NSC)",
-          "Kisan Vikas Patra (KVP)",
-          "Senior Citizen Savings Scheme (SCSS)",
-          "Sukanya Samriddhi Account (if applicable to daughters)",
-          "PPF (Public Provident Fund) - if available"
-        ],
-        "procedure": [
-          "Contact local post office with original certificates",
-          "Submit Death Certificate",
-          "Verification by post office authorities",
-          "Transfer to nominee's post office account or bank account",
-          "Interest accrued up to death incorporated in final amount"
+        "processingTime": "15-30 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "Succession Cert",
+          "Passbook",
+          "Nominee ID"
         ]
       }
     },
-    "applicableScenarios": {
-      "has_post_office": true
-    },
-    "requiredDocuments": {
-      "always": ["Death Certificate", "Original NSC/KVP certificates", "ID proof of nominee", "Nominee's bank or post office account details"],
-      "sometimes": ["Address proof of nominee", "Succession Certificate (if no nominee registered)"]
-    },
-    "legalImportance": "Required to access post office savings and transfer to legal heirs.",
-    "challenges": "May need to visit specific post office where account was held; processing can be slow in some areas",
-    "tips": "Keep NSC/KVP certificates safe; register nominee before investing; visit post office within 30-60 days of death; ensure bank account details are correct for transfer."
+    "legalImportance": "Access to post office savings and investments",
+    "challenges": "Procedural delays at post office",
+    "tips": "Visit with complete documentation. Keep passbook safe. Get receipt of application."
   },
   "MUTUAL_FUNDS_TRANSFER": {
-    "summary": "Mutual Fund Transfer is the process of transferring mutual fund holdings from the deceased investor to the nominee or legal heir.",
-    "what": "When a mutual fund investor dies, their holdings are transferred to the registered nominee or legal heir. The amount is calculated at the Net Asset Value (NAV) on the date of transfer.",
+    "summary": "Transfer mutual fund units to nominee",
+    "what": "Process to claim and transfer MF holdings",
     "statefulGuide": {
       "default": {
-        "where": "Mutual fund house office or through Registrar and Transfer Agent (RTA) like CAMS or Karvy",
+        "where": "Fund House / Registrar or Broker",
         "how": [
-          "Collect mutual fund statement/statements of accounts",
-          "Note down folio number and scheme details",
-          "Contact the mutual fund house or RTA with Death Certificate",
-          "Nominee submits transfer/redemption request",
-          "Fund house verifies nominee details with records",
-          "Provides redemption form to be filled and signed by nominee",
-          "Provides bank account form for fund transfer",
-          "Fund house redeems units at current NAV",
-          "Amount transferred to nominee's bank account (5-7 days)",
-          "Alternatively, units can be transferred to nominee's new folio"
+          "Provide death certificate",
+          "Submit claim form",
+          "Nominate fund transfer account",
+          "Registrar processes",
+          "Units transferred"
         ],
-        "processingTime": "5-7 days",
-        "cost": "Free (no transfer charges, but exit load may apply if scheme has load)",
-        "documents": ["Death Certificate", "Mutual fund statement", "ID proof of nominee", "Bank account details"]
-      },
-      "process": {
-        "mainFundHouses": [
-          "HDFC Mutual Fund - https://www.hdfcfund.com/",
-          "ICICI Prudential Mutual Fund - https://www.icicipruamc.com/",
-          "Axis Mutual Fund - https://www.axismf.com/",
-          "Reliance Mutual Fund - https://www.reliancemutual.com/",
-          "Aditya Birla Sun Life Mutual Fund - https://www.adityabirlasunlife.com/"
-        ],
-        "steps": [
-          "Contact fund house with folio number and Death Certificate",
-          "Request nominee transfer/redemption form",
-          "Nominee completes and submits form with documents",
-          "Fund house processes within 5-7 days",
-          "Units redeemed or transferred at current market NAV",
-          "Amount credited to bank account"
+        "processingTime": "7-15 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "MF Statement",
+          "Nominee ID",
+          "Bank Account Proof"
         ]
       }
     },
-    "applicableScenarios": {
-      "has_mutual_funds": true
-    },
-    "requiredDocuments": {
-      "always": ["Death Certificate", "Mutual fund statement", "ID proof of nominee", "Bank account details (for transfer)", "Signed redemption/transfer form"],
-      "sometimes": ["Succession Certificate (if no nominee)", "PAN card"]
-    },
-    "legalImportance": "Necessary to access mutual fund investments and settle the deceased's financial assets.",
-    "challenges": "Processing varies by fund house; NAV may fluctuate; exit loads may apply; requires nominee verification",
-    "tips": "Keep mutual fund statements and folio numbers safe; update nominee details with fund house; redeem or transfer promptly to avoid market volatility; keep bank account updated."
+    "legalImportance": "Access to investment holdings",
+    "challenges": "Verification of nominee, market volatility during processing",
+    "tips": "Don't sell MF during transfer process. Keep statement and investment records."
   },
   "LOAN_SETTLEMENT": {
-    "summary": "Loan Settlement is the process of paying off outstanding loans or credit card debts of the deceased from the estate or insurance proceeds.",
-    "what": "After death, all outstanding loans and credit card debts must be settled. This can be done using insurance proceeds, bank balances, or asset sale proceeds. The family is responsible for settling these obligations.",
+    "summary": "Settle outstanding loans using insurance or estate assets",
+    "what": "Process to pay off deceased's outstanding loans",
     "statefulGuide": {
       "default": {
-        "where": "Bank or financial institution where the loan was obtained",
+        "where": "Bank / Financial Institution",
         "how": [
-          "Identify all outstanding loans (home, auto, personal loans, credit cards)",
-          "Collect latest loan statements and credit card statements",
-          "Inform each lender about the death of borrower",
-          "Obtain loan settlement amount including interest up to date of death",
-          "Pay from insurance proceeds, bank balance, or asset sale",
-          "Obtain settlement certificate from each lender",
-          "Close the loan account and credit card accounts",
-          "For secured loans: release mortgage or security interest from property"
+          "Check outstanding balance",
+          "Get insurance payout if available",
+          "Make lump sum payment",
+          "Get loan clearance certificate",
+          "Discharge mortgage if applicable"
         ],
-        "processingTime": "Varies (insurance proceeds: 15-30 days; after asset sale: 30-90 days)",
-        "cost": "Amount of outstanding loan balance",
-        "documents": ["Death Certificate", "Loan statement", "Policy document (if insurance)", "Payment proof"]
-      },
-      "options": {
-        "1_Insurance_Proceeds": "If life insurance covers loan amount, use insurance claim proceeds to settle loan. Fastest method.",
-        "2_Bank_Balance": "Use deceased's bank account balance to pay off loans. Simple and direct.",
-        "3_Asset_Sale": "Sell inherited property or assets to generate funds for loan repayment.",
-        "4_Legal_Liability": "If insufficient funds, heirs may not be liable for personal loans beyond estate value, but secured loans (home, vehicle) may require settlement."
+        "processingTime": "7-30 days",
+        "cost": "As per outstanding balance",
+        "documents": [
+          "Death Cert",
+          "Loan Agreement",
+          "Insurance Claim",
+          "Bank Statements"
+        ]
       }
     },
-    "applicableScenarios": {
-      "has_loans": true
+    "legalImportance": "Essential to clear debts before asset distribution",
+    "challenges": "High loan amounts, insurance claim disputes",
+    "tips": "Check all loan documents. Prioritize high-interest loans first. Request loan waiver clauses."
+  },
+  "AADHAR_DEATH_UPDATE": {
+    "summary": "Update Aadhar records with death information",
+    "what": "Inform UIDAI about death for Aadhar database update",
+    "statefulGuide": {
+      "default": {
+        "where": "UIDAI Online Portal or Aadhar Center",
+        "how": [
+          "Go to resident.uidai.gov.in",
+          "Report death",
+          "Upload death certificate",
+          "UIDAI updates records",
+          "Aadhar marked as deceased"
+        ],
+        "processingTime": "7-10 days",
+        "cost": "Free",
+        "documents": [
+          "Death Certificate",
+          "Aadhar Copy"
+        ]
+      }
     },
-    "typesOfLoans": [
-      "Home loans",
-      "Auto loans",
-      "Personal loans",
-      "Credit card debts",
-      "Educational loans",
-      "Business loans"
-    ],
-    "requiredDocuments": {
-      "always": ["Death Certificate", "Loan statement", "ID proof", "Settlement payoff letter from lender"],
-      "forPayment": ["Cheque or bank transfer details", "Insurance claim documents (if applicable)"]
+    "legalImportance": "Prevents identity fraud and duplicate benefits",
+    "challenges": "Online portal issues, verification delays",
+    "tips": "Report death within 30 days. Upload clear copy of death certificate."
+  },
+  "PAN_DEATH_UPDATE": {
+    "summary": "Update PAN records with death information at Income Tax Department",
+    "what": "Notify IT Department of death for PAN cancellation",
+    "statefulGuide": {
+      "default": {
+        "where": "Income Tax Department or Online e-filing",
+        "how": [
+          "Visit e-filing portal",
+          "Submit death certificate",
+          "ITD verifies",
+          "PAN marked as deceased",
+          "Confirmation issued"
+        ],
+        "processingTime": "15-30 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "PAN Card Copy"
+        ]
+      }
     },
-    "legalImportance": "Family is legally responsible for settling borrower's debts to the extent of estate value. Failure to pay can result in legal action and property attachment.",
-    "challenges": "Multiple lenders may create complexity; secured loans require specific handling; may require negotiation for settlement; some loans may have co-signer liability",
-    "tips": "Collect all loan documents and statements; use insurance to settle loans if available; negotiate with lenders if funds are insufficient; get settlement certificates; settle within 6 months where possible."
+    "legalImportance": "Prevents tax-related fraud and duplicate filings",
+    "challenges": "Online system delays, manual verification",
+    "tips": "File early using e-filing. Keep PAN certificate copies. Monitor ITD portal for updates."
+  },
+  "GST_CLOSURE": {
+    "summary": "Close GST registration of deceased taxpayer",
+    "what": "Deregister from GST if deceased was registered business owner",
+    "statefulGuide": {
+      "default": {
+        "where": "GST Portal or GST Office",
+        "how": [
+          "Login to GST portal",
+          "File Form GST REG-15",
+          "Attach death certificate",
+          "GST processes deregistration",
+          "Closure confirmed"
+        ],
+        "processingTime": "10-15 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "GST Certificate",
+          "UIN"
+        ]
+      }
+    },
+    "legalImportance": "Prevents continued tax liabilities and penalties",
+    "challenges": "Pending liabilities, outstanding taxes",
+    "tips": "Settle all pending taxes first. File GST returns up to date. Keep GST certificate."
+  },
+  "PASSPORT_CANCELLATION": {
+    "summary": "Cancel passport records after death",
+    "what": "Formal cancellation of passport to prevent misuse",
+    "statefulGuide": {
+      "default": {
+        "where": "Passport Office",
+        "how": [
+          "Contact passport office",
+          "Submit death certificate",
+          "Provide passport number",
+          "Office cancels record",
+          "Confirmation issued"
+        ],
+        "processingTime": "10-20 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "Passport",
+          "ID Proof"
+        ]
+      }
+    },
+    "legalImportance": "Prevents identity theft and misuse",
+    "challenges": "Bureaucratic delays, lost passport complications",
+    "tips": "Submit original passport if available. Keep cancellation confirmation. Report if passport lost."
+  },
+  "VEHICLE_INSURANCE_TRANSFER": {
+    "summary": "Transfer motor insurance policy to new vehicle owner",
+    "what": "Process to transfer vehicle insurance to heir",
+    "statefulGuide": {
+      "default": {
+        "where": "Insurance Office",
+        "how": [
+          "Contact insurance company",
+          "Provide death certificate and new RC",
+          "Submit transfer request",
+          "Insurance updated",
+          "New policy issued"
+        ],
+        "processingTime": "7-10 days",
+        "cost": "Free (policy continues)",
+        "documents": [
+          "Death Cert",
+          "Vehicle RC",
+          "Insurance Policy",
+          "New Owner ID"
+        ]
+      }
+    },
+    "legalImportance": "Required for legal vehicle operation",
+    "challenges": "Insurance company delays, premium recalculation",
+    "tips": "Transfer immediately after getting new RC. Keep insurance active. Request updated premium."
+  },
+  "DRIVING_LICENSE_CANCELLATION": {
+    "summary": "Cancel driving license after death at RTO",
+    "what": "Formal cancellation of DL to prevent misuse",
+    "statefulGuide": {
+      "default": {
+        "where": "RTO - Road Transport Office",
+        "how": [
+          "Submit death certificate",
+          "Provide DL number",
+          "RTO cancels record",
+          "Confirmation letter issued"
+        ],
+        "processingTime": "10-15 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "Driving License"
+        ]
+      }
+    },
+    "legalImportance": "Prevents fraudulent use of DL",
+    "challenges": "Lost DL complications, RTO delays",
+    "tips": "Submit as soon as possible. Keep cancellation confirmation. Report if DL lost."
+  },
+  "PROPERTY_TAX_TRANSFER": {
+    "summary": "Transfer property tax assessment to heir at municipality",
+    "what": "Update property tax records in heir's name",
+    "statefulGuide": {
+      "default": {
+        "where": "Municipality / Nagar Nigam",
+        "how": [
+          "Submit succession certificate",
+          "Provide property details",
+          "File transfer application",
+          "Municipality updates records",
+          "New assessment issued"
+        ],
+        "processingTime": "30-45 days",
+        "cost": "₹100-500",
+        "documents": [
+          "Death Cert",
+          "Succession Cert",
+          "Property Papers"
+        ]
+      }
+    },
+    "legalImportance": "Ensures legal property tax obligations",
+    "challenges": "Tax arrears complications, bureaucratic delays",
+    "tips": "Clear any tax arrears first. Keep property documents. Get receipt of application."
+  },
+  "ELECTRICITY_TRANSFER": {
+    "summary": "Transfer electricity connection to heir at electricity board",
+    "what": "Update electricity bill in heir's name",
+    "statefulGuide": {
+      "default": {
+        "where": "Electricity Board / DISCOM",
+        "how": [
+          "Contact electricity office",
+          "Submit death certificate",
+          "Provide connection number",
+          "Apply for transfer",
+          "New bill issued"
+        ],
+        "processingTime": "10-15 days",
+        "cost": "₹100-500",
+        "documents": [
+          "Death Cert",
+          "Electricity Bill",
+          "Property Proof"
+        ]
+      }
+    },
+    "legalImportance": "Ensures continuity of essential service",
+    "challenges": "Outstanding bills, meter reading issues",
+    "tips": "Clear outstanding bills first. Provide accurate meter reading. Keep bill copies."
+  },
+  "WATER_CONNECTION_TRANSFER": {
+    "summary": "Transfer water connection to heir",
+    "what": "Update water supply bill in heir's name",
+    "statefulGuide": {
+      "default": {
+        "where": "Water Supply Authority",
+        "how": [
+          "Contact water authority",
+          "Submit death certificate",
+          "Provide connection number",
+          "Apply for transfer",
+          "New bill issued"
+        ],
+        "processingTime": "10-15 days",
+        "cost": "₹100-300",
+        "documents": [
+          "Death Cert",
+          "Water Bill",
+          "Property Proof"
+        ]
+      }
+    },
+    "legalImportance": "Ensures access to essential service",
+    "challenges": "Outstanding dues, connection verification",
+    "tips": "Settle outstanding bills. Verify connection details. Keep bill copies."
+  },
+  "GAS_CONNECTION_TRANSFER": {
+    "summary": "Transfer LPG/gas connection to heir",
+    "what": "Update gas connection in heir's name",
+    "statefulGuide": {
+      "default": {
+        "where": "Gas Supply Company (IOCL, BPCL, HPCL)",
+        "how": [
+          "Contact gas supplier",
+          "Submit death certificate",
+          "Provide consumer number",
+          "Complete transfer formalities",
+          "New account issued"
+        ],
+        "processingTime": "5-10 days",
+        "cost": "Free (possible new ID card fee ₹50-100)",
+        "documents": [
+          "Death Cert",
+          "Gas Bill",
+          "Property Proof",
+          "Heir's ID"
+        ]
+      }
+    },
+    "legalImportance": "Ensures safe continuation of service",
+    "challenges": "Outstanding dues, supplier delays",
+    "tips": "Clear pending bills. Verify consumer number. Get new ID card."
+  },
+  "TELEPHONE_TRANSFER": {
+    "summary": "Transfer landline connection to heir",
+    "what": "Update telephone connection in heir's name",
+    "statefulGuide": {
+      "default": {
+        "where": "Telecom Service Provider Office",
+        "how": [
+          "Contact service provider",
+          "Submit death certificate",
+          "Provide phone number",
+          "Apply for transfer",
+          "New bill issued in heir's name"
+        ],
+        "processingTime": "5-10 days",
+        "cost": "₹0-200",
+        "documents": [
+          "Death Cert",
+          "Phone Bill",
+          "Property Proof"
+        ]
+      }
+    },
+    "legalImportance": "Ensures service continuity and legal liability",
+    "challenges": "Service provider delays, outstanding bills",
+    "tips": "Pay outstanding bills first. Provide proof of residence. Keep bill copies."
+  },
+  "AGRICULTURAL_LAND_TRANSFER": {
+    "summary": "Transfer agricultural land ownership to heir",
+    "what": "Official transfer of farming land in revenue records",
+    "statefulGuide": {
+      "default": {
+        "where": "District Revenue Office / Taluk Office",
+        "how": [
+          "Apply with succession certificate",
+          "Submit land documents",
+          "Get land revenue certificate",
+          "Apply for mutation",
+          "Ownership transferred"
+        ],
+        "processingTime": "60-90 days",
+        "cost": "₹500-2000",
+        "documents": [
+          "Death Cert",
+          "Succession Cert",
+          "Land Papers",
+          "ID Proof"
+        ]
+      }
+    },
+    "legalImportance": "Establishes legal farming rights",
+    "challenges": "Land disputes, boundary issues, long processing",
+    "tips": "Get latest land records. Clarify boundaries. Hire surveyor if needed. Keep land papers safe."
+  },
+  "COMMERCIAL_PROPERTY_TRANSFER": {
+    "summary": "Transfer commercial property to heir",
+    "what": "Official transfer of commercial building/space ownership",
+    "statefulGuide": {
+      "default": {
+        "where": "Sub-Registrar Office",
+        "how": [
+          "Prepare deed of transfer",
+          "Get succession certificate",
+          "Submit property documents",
+          "Register transfer",
+          "New ownership registered"
+        ],
+        "processingTime": "30-45 days",
+        "cost": "Registration fees (2-4% of property value)",
+        "documents": [
+          "Death Cert",
+          "Succession Cert",
+          "Property Deed",
+          "ID Proof"
+        ]
+      }
+    },
+    "legalImportance": "Establishes commercial property rights",
+    "challenges": "Higher costs, complex documentation, tenant complications",
+    "tips": "Use advocate for registration. Settle tenant issues first. Keep property certificate."
+  },
+  "RENTAL_AGREEMENT_TRANSFER": {
+    "summary": "Transfer rental property agreement to heir",
+    "what": "Update rental agreement with new owner",
+    "statefulGuide": {
+      "default": {
+        "where": "Sub-Registrar Office or Direct",
+        "how": [
+          "Get succession certificate",
+          "Notify current tenants",
+          "Register transfer",
+          "Execute new agreement",
+          "Tenants updated"
+        ],
+        "processingTime": "15-30 days",
+        "cost": "₹500-1000",
+        "documents": [
+          "Death Cert",
+          "Rental Agreement",
+          "Succession Cert"
+        ]
+      }
+    },
+    "legalImportance": "Ensures legal rental income and tenant rights",
+    "challenges": "Tenant relocation issues, income disputes",
+    "tips": "Notify tenants officially. Review rental agreement terms. Get new lease signed."
+  },
+  "TWO_WHEELER_TRANSFER": {
+    "summary": "Transfer motorcycle/scooter registration to heir",
+    "what": "Official transfer of two-wheeler RC",
+    "statefulGuide": {
+      "default": {
+        "where": "RTO - Road Transport Office",
+        "how": [
+          "Apply with death certificate",
+          "Submit vehicle documents",
+          "Provide heir's details",
+          "Get vehicle inspected",
+          "RC transferred"
+        ],
+        "processingTime": "20-30 days",
+        "cost": "₹300-800",
+        "documents": [
+          "Death Cert",
+          "RC",
+          "Insurance",
+          "Heir's ID"
+        ]
+      }
+    },
+    "legalImportance": "Legal requirement for vehicle operation",
+    "challenges": "RTO procedures, inspection requirements",
+    "tips": "Ensure insurance is current. Get all documents. Keep transfer receipt."
+  },
+  "COMMERCIAL_VEHICLE_TRANSFER": {
+    "summary": "Transfer commercial vehicle registration (taxi, truck, bus)",
+    "what": "Transfer commercial vehicle ownership and permits",
+    "statefulGuide": {
+      "default": {
+        "where": "RTO - Road Transport Office",
+        "how": [
+          "Get commercial vehicle documents",
+          "Apply for transfer",
+          "Submit business license",
+          "Get vehicle inspected",
+          "Transfer completed"
+        ],
+        "processingTime": "30-45 days",
+        "cost": "₹1000-3000",
+        "documents": [
+          "Death Cert",
+          "RC",
+          "Business License",
+          "Insurance"
+        ]
+      }
+    },
+    "legalImportance": "Required for legal commercial operation",
+    "challenges": "Complex commercial procedures, operator license issues",
+    "tips": "Transfer business license first. Update operator credentials. Keep all commercial docs."
+  },
+  "NREGA_TRANSFER": {
+    "summary": "Transfer MGNREGA job card to new household head",
+    "what": "Official transfer of rural employment scheme card",
+    "statefulGuide": {
+      "default": {
+        "where": "District Employment Office / Gram Panchayat",
+        "how": [
+          "Contact employment office",
+          "Submit death certificate",
+          "Apply for card transfer",
+          "Get new job card issued",
+          "Employment benefits transferred"
+        ],
+        "processingTime": "15-30 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "Job Card",
+          "ID Proof",
+          "Aadhar"
+        ]
+      }
+    },
+    "legalImportance": "Ensures continued rural employment benefits",
+    "challenges": "Office delays, inconsistent procedures",
+    "tips": "Contact GP for assistance. Keep job card safe. Verify household registration."
+  },
+  "RATION_CARD_TRANSFER": {
+    "summary": "Update ration card with new head of family",
+    "what": "Transfer public distribution system card",
+    "statefulGuide": {
+      "default": {
+        "where": "Public Distribution System / Ration Shop",
+        "how": [
+          "Contact food office",
+          "Submit death certificate",
+          "Apply for card update",
+          "Get new card issued",
+          "Verify ration eligibility"
+        ],
+        "processingTime": "15-20 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "Ration Card",
+          "ID Proof",
+          "Address Proof"
+        ]
+      }
+    },
+    "legalImportance": "Ensures access to subsidized food grains",
+    "challenges": "Office delays, eligibility verification",
+    "tips": "Get new card immediately. Verify household members. Keep card safe."
+  },
+  "WIDOW_PENSION_APPLICATION": {
+    "summary": "Apply for widow/widower pension from government",
+    "what": "Government assistance program for spouses of deceased",
+    "statefulGuide": {
+      "default": {
+        "where": "Social Welfare Department",
+        "how": [
+          "Get eligibility criteria",
+          "Prepare application",
+          "Submit death certificate",
+          "Get recommended by GP/Tehsildar",
+          "Pension approved and disbursed"
+        ],
+        "processingTime": "30-60 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "ID Proof",
+          "Property Certificate",
+          "Aadhar"
+        ]
+      }
+    },
+    "legalImportance": "Ensures financial security for surviving spouse",
+    "challenges": "Income limits, property restrictions, processing delays",
+    "tips": "Apply soon after death. Get GP recommendation. Verify eligibility criteria. Keep pension book."
+  },
+  "ORPHAN_BENEFITS_APPLICATION": {
+    "summary": "Apply for orphan benefits for minor children",
+    "what": "Government assistance for children of deceased",
+    "statefulGuide": {
+      "default": {
+        "where": "Social Welfare Department / Education Department",
+        "how": [
+          "Apply at welfare office",
+          "Submit death certificate",
+          "Provide children's details",
+          "Get ward declared orphan",
+          "Benefits disbursed"
+        ],
+        "processingTime": "45-90 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "Birth Certs",
+          "School Documents",
+          "ID Proof"
+        ]
+      }
+    },
+    "legalImportance": "Ensures financial support for orphaned children",
+    "challenges": "Age limit restrictions, income criteria, processing delays",
+    "tips": "Apply before age restrictions expire. Gather all children documents. Keep welfare ID."
+  },
+  "SCHOLARSHIP_TRANSFER": {
+    "summary": "Update student scholarship with death of parent/guardian",
+    "what": "Modify scholarship eligibility due to parent death",
+    "statefulGuide": {
+      "default": {
+        "where": "Education Department / School/College",
+        "how": [
+          "Inform institution of death",
+          "Request scholarship review",
+          "Submit death certificate",
+          "Submit new income certificate",
+          "Scholarship updated/increased"
+        ],
+        "processingTime": "15-30 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "Scholarship Certificate",
+          "New Income Certificate"
+        ]
+      }
+    },
+    "legalImportance": "May increase scholarship eligibility",
+    "challenges": "Income certification delays, institutional bureaucracy",
+    "tips": "Inform school/college immediately. Get new income certificate. Follow institutional process."
+  },
+  "HEALTH_INSURANCE_TRANSFER": {
+    "summary": "Transfer health insurance policy to new member",
+    "what": "Update health insurance coverage after death",
+    "statefulGuide": {
+      "default": {
+        "where": "Insurance Office or Online Portal",
+        "how": [
+          "Contact insurance company",
+          "Submit death certificate",
+          "Apply for policy transfer",
+          "Get new policy issued",
+          "Coverage continues for family"
+        ],
+        "processingTime": "7-15 days",
+        "cost": "Free (premium continues/adjusts)",
+        "documents": [
+          "Death Cert",
+          "Policy Document",
+          "Claim History",
+          "ID Proof"
+        ]
+      }
+    },
+    "legalImportance": "Ensures family health coverage",
+    "challenges": "Premium recalculation, waiting period for new members",
+    "tips": "Transfer immediately to avoid coverage gap. Review coverage amounts. Update beneficiaries."
+  },
+  "STOCK_TRANSFER": {
+    "summary": "Transfer stocks and securities to nominee",
+    "what": "Process for transferring share market investments",
+    "statefulGuide": {
+      "default": {
+        "where": "Demat Account / Stock Broker / Registry",
+        "how": [
+          "Provide death certificate",
+          "Submit transmission request",
+          "Transfer agent processes",
+          "Shares transferred to nominee demat",
+          "Market value updates"
+        ],
+        "processingTime": "10-20 days",
+        "cost": "Free/Nominal fee",
+        "documents": [
+          "Death Cert",
+          "Demat Statement",
+          "Nominee ID",
+          "Bank Account Proof"
+        ]
+      }
+    },
+    "legalImportance": "Access to investment holdings",
+    "challenges": "Market volatility, registration delays, tax implications",
+    "tips": "Don't panic sell. Keep all share certificates. Monitor market during transfer."
+  },
+  "FIXED_DEPOSIT_TRANSFER": {
+    "summary": "Transfer fixed deposits to nominee",
+    "what": "Claim FD balance and interest",
+    "statefulGuide": {
+      "default": {
+        "where": "Bank",
+        "how": [
+          "Contact bank with death certificate",
+          "Submit FD certificate",
+          "Provide nominee details",
+          "Bank processes",
+          "Amount credited to nominee account"
+        ],
+        "processingTime": "7-14 days",
+        "cost": "Free",
+        "documents": [
+          "Death Cert",
+          "FD Certificate",
+          "Deposit Receipt",
+          "Nominee ID and Bank Account"
+        ]
+      }
+    },
+    "legalImportance": "Access to liquid savings",
+    "challenges": "Interest calculation, Bank delays, nomination disputes",
+    "tips": "Keep FD certificate safe. Clarify interest accrual. Verify bank account details."
+  },
+  "SAFE_DEPOSIT_LOCKER": {
+    "summary": "Access and transfer safe deposit locker to heir",
+    "what": "Process to open locker and transfer contents",
+    "statefulGuide": {
+      "default": {
+        "where": "Bank",
+        "how": [
+          "Contact bank with death certificate",
+          "Request locker opening",
+          "Bank official opens locker",
+          "Contents inventoried",
+          "Locker transferred to heir"
+        ],
+        "processingTime": "10-20 days",
+        "cost": "₹100-500 (per annum)",
+        "documents": [
+          "Death Cert",
+          "Locker Receipt",
+          "Nominee ID"
+        ]
+      }
+    },
+    "legalImportance": "Access to valuables and important documents",
+    "challenges": "Bank procedures, inventory disputes, lost keys",
+    "tips": "Bring locker receipt. Take bank representative. Get inventory certificate."
+  },
+  "CREDIT_CARD_CANCELLATION": {
+    "summary": "Cancel credit card and settle any outstanding dues",
+    "what": "Deactivate credit card account after death",
+    "statefulGuide": {
+      "default": {
+        "where": "Bank / Credit Card Company",
+        "how": [
+          "Contact bank/card company",
+          "Submit death certificate",
+          "Check outstanding balance",
+          "Settle dues from estate",
+          "Card cancelled and confirmed"
+        ],
+        "processingTime": "5-10 days",
+        "cost": "As per outstanding balance",
+        "documents": [
+          "Death Cert",
+          "Credit Card",
+          "Bank Statement"
+        ]
+      }
+    },
+    "legalImportance": "Prevents fraud and liability",
+    "challenges": "Outstanding balance liability, fraud prevention",
+    "tips": "Report death immediately. Settle any dues. Cancel immediately to prevent fraud."
+  },
+  "CRYPTO_TRANSFER": {
+    "summary": "Transfer cryptocurrency and digital assets to heir",
+    "what": "Access and transfer digital currency holdings",
+    "statefulGuide": {
+      "default": {
+        "where": "Crypto Exchange / Digital Wallet / Custodian",
+        "how": [
+          "Access wallet/exchange account",
+          "Submit death certificate",
+          "Provide heir details",
+          "Exchange processes transfer",
+          "Assets moved to heir's wallet"
+        ],
+        "processingTime": "7-30 days",
+        "cost": "Transfer fees (varies)",
+        "documents": [
+          "Death Cert",
+          "Wallet Address",
+          "Exchange Account Details",
+          "Heir ID"
+        ]
+      }
+    },
+    "legalImportance": "Ensures access to digital wealth",
+    "challenges": "Lost password/keys, exchange delays, legal uncertainty, market volatility",
+    "tips": "Keep recovery phrases/keys safe. Use recognized exchanges. Monitor holdings during transfer."
+  },
+  "BUSINESS_CLOSURE": {
+    "summary": "Close shop license and business registration",
+    "what": "Official closure of business entity",
+    "statefulGuide": {
+      "default": {
+        "where": "Registrar of Firms / Business Registration Office",
+        "how": [
+          "Get business registration documents",
+          "File closure application",
+          "Submit death certificate",
+          "Settle all liabilities",
+          "Registration closed"
+        ],
+        "processingTime": "30-60 days",
+        "cost": "₹500-2000",
+        "documents": [
+          "Death Cert",
+          "Business License",
+          "Registration Certificate",
+          "Tax Clearance"
+        ]
+      }
+    },
+    "legalImportance": "Prevents ongoing business liability",
+    "challenges": "Outstanding taxes, employee issues, creditor claims",
+    "tips": "Settle taxes first. Notify employees. Pay creditors. Get closure certificate."
+  },
+  "PARTNERSHIP_DISSOLUTION": {
+    "summary": "Dissolve partnership agreement after death of partner",
+    "what": "Official dissolution of partnership firm",
+    "statefulGuide": {
+      "default": {
+        "where": "Registrar of Firms",
+        "how": [
+          "Get partnership deed",
+          "File dissolution notice",
+          "Submit death certificate",
+          "Settle partnership accounts",
+          "Deregistration completed"
+        ],
+        "processingTime": "45-90 days",
+        "cost": "₹600-1500",
+        "documents": [
+          "Death Cert",
+          "Partnership Deed",
+          "Board Resolution",
+          "Accountant Certificate"
+        ]
+      }
+    },
+    "legalImportance": "Terminates partner obligations",
+    "challenges": "Complex accounting, creditor disputes, asset division",
+    "tips": "Get professional accountant. Settle all partnership liabilities. Get dissolution certificate."
+  },
+  "COMPANY_SHARES_TRANSFER": {
+    "summary": "Transfer company shares to nominee",
+    "what": "Transfer shareholding rights and dividends",
+    "statefulGuide": {
+      "default": {
+        "where": "Company / Stock Transfer Agent / ROC",
+        "how": [
+          "Submit death certificate",
+          "Get share transfer form",
+          "File with company",
+          "Share agent processes",
+          "Shares registered to nominee"
+        ],
+        "processingTime": "15-30 days",
+        "cost": "Transfer fees (₹100-500)",
+        "documents": [
+          "Death Cert",
+          "Share Certificate",
+          "Transfer Form",
+          "Nominee ID"
+        ]
+      }
+    },
+    "legalImportance": "Access to company shares and dividends",
+    "challenges": "Transfer delays, share value changes, dividend timing",
+    "tips": "Keep share certificate safe. Track dividend dates. Use registered agent for transfer."
+  },
+  "WILL_PROBATE": {
+    "summary": "Get will probated through court for legal succession",
+    "what": "Court approval and execution of will",
+    "statefulGuide": {
+      "default": {
+        "where": "District Courts",
+        "how": [
+          "Prepare probate petition",
+          "File in district court",
+          "Provide death certificate",
+          "Court verifies will",
+          "Probate granted",
+          "Assets distributed per will"
+        ],
+        "processingTime": "6-24 months",
+        "cost": "₹5000-50000+ (varies by estate value)",
+        "documents": [
+          "Death Cert",
+          "Will Copy",
+          "ID Proof",
+          "Asset Documents"
+        ]
+      }
+    },
+    "legalImportance": "Legally validates will and enables asset distribution",
+    "challenges": "Long court process, contested wills, high costs",
+    "tips": "Use advocate for probate. Keep will safe. Gather all asset documents. Be prepared for delays."
+  },
+  "GUARDIANSHIP_PETITION": {
+    "summary": "File guardianship petition for minor children",
+    "what": "Court appointment of legal guardian for minors",
+    "statefulGuide": {
+      "default": {
+        "where": "District Courts",
+        "how": [
+          "Prepare guardianship petition",
+          "File documents with court",
+          "Attend court hearing",
+          "Background verification",
+          "Court appoints guardian"
+        ],
+        "processingTime": "2-6 months",
+        "cost": "₹2000-5000 (legal fees)",
+        "documents": [
+          "Death Cert",
+          "Birth Certs",
+          "ID Proof",
+          "Guardian Consent",
+          "Character Certificate"
+        ]
+      }
+    },
+    "legalImportance": "Legally protects children's interests and welfare",
+    "challenges": "Court delays, competing claims, property management",
+    "tips": "Act quickly before default appointment. Choose responsible guardian. Gather character references."
+  },
+  "COPRA_APPLICATION": {
+    "summary": "File consumer complaint for denied insurance claim",
+    "what": "Legal action if insurance claim is denied",
+    "statefulGuide": {
+      "default": {
+        "where": "Consumer Protection Authority / NCDRC",
+        "how": [
+          "Get claim rejection letter from insurance",
+          "File COPRA complaint",
+          "Provide death certificate",
+          "Attend hearings",
+          "Compensation awarded if valid"
+        ],
+        "processingTime": "1-3 years",
+        "cost": "Filing fee (₹500-5000 based on claim value)",
+        "documents": [
+          "Death Cert",
+          "Policy",
+          "Claim Rejection Letter",
+          "Evidence",
+          "Witness Statements"
+        ]
+      }
+    },
+    "legalImportance": "Protects rights when legitimate claims are denied",
+    "challenges": "Long legal process, complex documentation, legal costs",
+    "tips": "Consult lawyer immediately. Document all communications. Keep all policy documents."
   }
 }

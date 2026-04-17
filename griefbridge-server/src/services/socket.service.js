@@ -11,9 +11,12 @@ const userSockets = new Map(); // userId -> Set of socket IDs
 const roomSockets = new Map(); // roomId -> Set of socket IDs
 
 export function initializeSockets(server) {
+  // Parse multiple CORS origins from environment variable
+  const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173').split(',').map(o => o.trim());
+  
   io = new Server(server, {
     cors: {
-      origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+      origin: corsOrigins,
       credentials: true
     },
     transports: ['websocket', 'polling']
@@ -29,7 +32,7 @@ export function initializeSockets(server) {
 
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      socket.userId = decoded.userId;
+      socket.userId = decoded.id;
       socket.userEmail = decoded.email;
       next();
     } catch (error) {
@@ -96,6 +99,8 @@ export function initializeSockets(server) {
     /**
      * Real-time notification broadcast
      */
+    socket.on('send_notification', (data) => {
+      const { userId, type, message, caseId } = data;
       // Send to specific user if online
       if (userSockets.has(userId)) {
         const userSocketIds = Array.from(userSockets.get(userId));
@@ -113,7 +118,9 @@ export function initializeSockets(server) {
     /**
      * Real-time deadline alert
      */
-    
+    socket.on('deadline_alert', (data) => {
+      const { caseId, procedureId, title, daysUntil } = data;
+      const roomId = `case_${caseId}`;
       io.to(roomId).emit('deadline_upcoming', {
         caseId,
         procedureId,
@@ -130,7 +137,9 @@ export function initializeSockets(server) {
     socket.on('start_typing', (data) => {
       const { caseId, field } = data;
       const roomId = `case_${caseId}`;
-    field,
+      socket.to(roomId).emit('user_started_typing', {
+        userId: socket.userId,
+        field,
         timestamp: new Date().toISOString()
       });
     });
@@ -151,7 +160,9 @@ export function initializeSockets(server) {
     socket.on('document_uploaded', (data) => {
       const { caseId, documentName, documentType } = data;
       const roomId = `case_${caseId}`;
-    documentName,
+      socket.to(roomId).emit('document_updated', {
+        caseId,
+        documentName,
         documentType,
         uploadedBy: socket.userId,
         uploadedByEmail: socket.userEmail,
@@ -165,7 +176,9 @@ export function initializeSockets(server) {
     socket.on('experience_shared', (data) => {
       const { procedureId, experienceId } = data;
       const roomId = `procedure_${procedureId}`;
-    experienceId,
+      socket.to(roomId).emit('experience_updated', {
+        procedureId,
+        experienceId,
         sharedBy: socket.userId,
         timestamp: new Date().toISOString()
       });
@@ -180,6 +193,7 @@ export function initializeSockets(server) {
       const room = io.sockets.adapter.rooms.get(roomId);
       const clients = room ? Array.from(room) : [];
 
+      socket.emit('online_users', {
         userIds: clients.map(id => io.sockets.sockets.get(id)?.userId).filter(Boolean)
       });
     });

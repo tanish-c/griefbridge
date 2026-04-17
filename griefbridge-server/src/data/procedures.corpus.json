@@ -18,9 +18,15 @@
     },
     "requirementWeights": {},
     "legalPriority": 1,
-    "legalDeadline": { "value": 30, "unit": "days" },
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
     "dependencies": [],
-    "requiredDocTypes": ["HOSPITAL_REPORT", "ID_PROOF"],
+    "requiredDocTypes": [
+      "HOSPITAL_REPORT",
+      "ID_PROOF"
+    ],
     "category": "ADMINISTRATIVE",
     "complexity": "LOW"
   },
@@ -41,11 +47,22 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 2 },
+    "requirementWeights": {
+      "has_property": 2
+    },
     "legalPriority": 2,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS",
+      "ID_PROOF"
+    ],
     "category": "PROPERTY",
     "complexity": "MEDIUM"
   },
@@ -56,7 +73,7 @@
     "description": "File EPF claim as nominee using Form 20 for Provident Fund withdrawal",
     "requirementVector": {
       "is_govt_employee": 0,
-      "has_epf": 1,
+      "has_epf": 0,
       "has_property": 0,
       "has_insurance": 0,
       "has_pension": 0,
@@ -66,11 +83,22 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_epf": 2 },
+    "requirementWeights": {
+      "has_epf": 2
+    },
     "legalPriority": 3,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "NOMINEE_AADHAAR", "EPF_DOCS"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "NOMINEE_AADHAAR",
+      "EPF_DOCS"
+    ],
     "category": "FINANCIAL",
     "complexity": "MEDIUM",
     "formTemplateId": "EPF_FORM_20"
@@ -89,14 +117,23 @@
       "has_post_office": 0,
       "has_vehicle": 0,
       "is_taxpayer": 0,
-      "has_mutual_funds": 0,
+      "has_mutual_funds": 1,
       "has_loans": 0
     },
     "requirementWeights": {},
     "legalPriority": 4,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "BANK_PASSBOOK", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "BANK_PASSBOOK",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "LOW"
   },
@@ -117,11 +154,22 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_insurance": 2 },
+    "requirementWeights": {
+      "has_insurance": 2
+    },
     "legalPriority": 5,
-    "legalDeadline": { "value": 2, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "INSURANCE_POLICY", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 2,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "INSURANCE_POLICY",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "MEDIUM"
   },
@@ -142,11 +190,23 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 2 },
+    "requirementWeights": {
+      "has_property": 2
+    },
     "legalPriority": 6,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT", "SUCCESSION_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS", "SUCCESSION_CERT"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT",
+      "SUCCESSION_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS",
+      "SUCCESSION_CERT"
+    ],
     "category": "PROPERTY",
     "complexity": "HIGH"
   },
@@ -160,18 +220,29 @@
       "has_epf": 0,
       "has_property": 0,
       "has_insurance": 0,
-      "has_pension": 1,
+      "has_pension": 0,
       "has_post_office": 0,
       "has_vehicle": 0,
       "is_taxpayer": 0,
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_pension": 2, "is_govt_employee": 1 },
+    "requirementWeights": {
+      "has_pension": 2,
+      "is_govt_employee": 1
+    },
     "legalPriority": 7,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "MEDIUM"
   },
@@ -192,11 +263,22 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_vehicle": 2 },
+    "requirementWeights": {
+      "has_vehicle": 2
+    },
     "legalPriority": 8,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF", "VEHICLE_DOCS"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF",
+      "VEHICLE_DOCS"
+    ],
     "category": "VEHICLES",
     "complexity": "MEDIUM"
   },
@@ -217,11 +299,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "is_taxpayer": 2 },
+    "requirementWeights": {
+      "is_taxpayer": 2
+    },
     "legalPriority": 9,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "TAX",
     "complexity": "HIGH"
   },
@@ -236,17 +328,27 @@
       "has_property": 0,
       "has_insurance": 0,
       "has_pension": 0,
-      "has_post_office": 1,
+      "has_post_office": 0,
       "has_vehicle": 0,
       "is_taxpayer": 0,
-      "has_mutual_funds": 0,
+      "has_mutual_funds": 1,
       "has_loans": 0
     },
-    "requirementWeights": { "has_post_office": 2 },
+    "requirementWeights": {
+      "has_post_office": 2
+    },
     "legalPriority": 10,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "LOW"
   },
@@ -267,11 +369,21 @@
       "has_mutual_funds": 1,
       "has_loans": 0
     },
-    "requirementWeights": { "has_mutual_funds": 2 },
+    "requirementWeights": {
+      "has_mutual_funds": 2
+    },
     "legalPriority": 11,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "MEDIUM"
   },
@@ -292,11 +404,22 @@
       "has_mutual_funds": 0,
       "has_loans": 1
     },
-    "requirementWeights": { "has_loans": 2 },
+    "requirementWeights": {
+      "has_loans": 2
+    },
     "legalPriority": 12,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF", "LOAN_DOCS"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF",
+      "LOAN_DOCS"
+    ],
     "category": "FINANCIAL",
     "complexity": "MEDIUM"
   },
@@ -319,9 +442,17 @@
     },
     "requirementWeights": {},
     "legalPriority": 2,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "AADHAR_COPY"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "AADHAR_COPY"
+    ],
     "category": "ADMINISTRATIVE",
     "complexity": "LOW"
   },
@@ -342,11 +473,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "is_taxpayer": 1 },
+    "requirementWeights": {
+      "is_taxpayer": 1
+    },
     "legalPriority": 3,
-    "legalDeadline": { "value": 60, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PAN_CARD"],
+    "legalDeadline": {
+      "value": 60,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PAN_CARD"
+    ],
     "category": "TAX",
     "complexity": "LOW"
   },
@@ -367,11 +508,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "is_taxpayer": 1 },
+    "requirementWeights": {
+      "is_taxpayer": 1
+    },
     "legalPriority": 4,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "GST_CERTIFICATE"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "GST_CERTIFICATE"
+    ],
     "category": "TAX",
     "complexity": "MEDIUM"
   },
@@ -394,9 +545,17 @@
     },
     "requirementWeights": {},
     "legalPriority": 5,
-    "legalDeadline": { "value": 90, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PASSPORT"],
+    "legalDeadline": {
+      "value": 90,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PASSPORT"
+    ],
     "category": "ADMINISTRATIVE",
     "complexity": "LOW"
   },
@@ -412,16 +571,29 @@
       "has_insurance": 1,
       "has_pension": 0,
       "has_post_office": 0,
-      "has_vehicle": 1,
+      "has_vehicle": 0,
       "is_taxpayer": 0,
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_vehicle": 2, "has_insurance": 1 },
+    "requirementWeights": {
+      "has_vehicle": 2,
+      "has_insurance": 1
+    },
     "legalPriority": 8,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT", "VEHICLE_TRANSFER"],
-    "requiredDocTypes": ["DEATH_CERT", "INSURANCE_POLICY", "VEHICLE_RC"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT",
+      "VEHICLE_TRANSFER"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "INSURANCE_POLICY",
+      "VEHICLE_RC"
+    ],
     "category": "VEHICLES",
     "complexity": "LOW"
   },
@@ -437,16 +609,24 @@
       "has_insurance": 0,
       "has_pension": 0,
       "has_post_office": 0,
-      "has_vehicle": 0,
+      "has_vehicle": 1,
       "is_taxpayer": 0,
       "has_mutual_funds": 0,
       "has_loans": 0
     },
     "requirementWeights": {},
     "legalPriority": 5,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "ADMINISTRATIVE",
     "complexity": "LOW"
   },
@@ -467,11 +647,22 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 1 },
+    "requirementWeights": {
+      "has_property": 1
+    },
     "legalPriority": 6,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT", "SUCCESSION_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT",
+      "SUCCESSION_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS"
+    ],
     "category": "PROPERTY",
     "complexity": "LOW"
   },
@@ -492,11 +683,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 1 },
+    "requirementWeights": {
+      "has_property": 1
+    },
     "legalPriority": 6,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS"
+    ],
     "category": "UTILITIES",
     "complexity": "LOW"
   },
@@ -517,11 +718,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 1 },
+    "requirementWeights": {
+      "has_property": 1
+    },
     "legalPriority": 6,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS"
+    ],
     "category": "UTILITIES",
     "complexity": "LOW"
   },
@@ -542,11 +753,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 1 },
+    "requirementWeights": {
+      "has_property": 1
+    },
     "legalPriority": 6,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS"
+    ],
     "category": "UTILITIES",
     "complexity": "LOW"
   },
@@ -558,7 +779,7 @@
     "requirementVector": {
       "is_govt_employee": 0,
       "has_epf": 0,
-      "has_property": 0,
+      "has_property": 1,
       "has_insurance": 0,
       "has_pension": 0,
       "has_post_office": 0,
@@ -569,9 +790,17 @@
     },
     "requirementWeights": {},
     "legalPriority": 8,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "UTILITIES",
     "complexity": "LOW"
   },
@@ -592,11 +821,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 2 },
+    "requirementWeights": {
+      "has_property": 2
+    },
     "legalPriority": 7,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS"
+    ],
     "category": "PROPERTY",
     "complexity": "HIGH"
   },
@@ -613,15 +852,27 @@
       "has_pension": 0,
       "has_post_office": 0,
       "has_vehicle": 0,
-      "is_taxpayer": 1,
+      "is_taxpayer": 0,
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 2, "is_taxpayer": 1 },
+    "requirementWeights": {
+      "has_property": 2,
+      "is_taxpayer": 1
+    },
     "legalPriority": 7,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT", "SUCCESSION_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PROPERTY_DOCS"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT",
+      "SUCCESSION_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PROPERTY_DOCS"
+    ],
     "category": "PROPERTY",
     "complexity": "HIGH"
   },
@@ -642,11 +893,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 1 },
+    "requirementWeights": {
+      "has_property": 1
+    },
     "legalPriority": 7,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "RENTAL_AGREEMENT"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "RENTAL_AGREEMENT"
+    ],
     "category": "PROPERTY",
     "complexity": "MEDIUM"
   },
@@ -667,11 +928,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_vehicle": 1 },
+    "requirementWeights": {
+      "has_vehicle": 1
+    },
     "legalPriority": 8,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "VEHICLE_DOCS"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "VEHICLE_DOCS"
+    ],
     "category": "VEHICLES",
     "complexity": "LOW"
   },
@@ -688,15 +959,26 @@
       "has_pension": 0,
       "has_post_office": 0,
       "has_vehicle": 1,
-      "is_taxpayer": 1,
+      "is_taxpayer": 0,
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_vehicle": 2, "is_taxpayer": 1 },
+    "requirementWeights": {
+      "has_vehicle": 2,
+      "is_taxpayer": 1
+    },
     "legalPriority": 8,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "VEHICLE_DOCS"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "VEHICLE_DOCS"
+    ],
     "category": "VEHICLES",
     "complexity": "HIGH"
   },
@@ -715,13 +997,21 @@
       "has_vehicle": 0,
       "is_taxpayer": 0,
       "has_mutual_funds": 0,
-      "has_loans": 0
+      "has_loans": 1
     },
     "requirementWeights": {},
     "legalPriority": 9,
-    "legalDeadline": { "value": 60, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 60,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "GOVERNMENT_BENEFITS",
     "complexity": "LOW"
   },
@@ -739,14 +1029,22 @@
       "has_post_office": 0,
       "has_vehicle": 0,
       "is_taxpayer": 0,
-      "has_mutual_funds": 0,
+      "has_mutual_funds": 1,
       "has_loans": 0
     },
     "requirementWeights": {},
     "legalPriority": 9,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "GOVERNMENT_BENEFITS",
     "complexity": "LOW"
   },
@@ -760,7 +1058,7 @@
       "has_epf": 0,
       "has_property": 0,
       "has_insurance": 0,
-      "has_pension": 0,
+      "has_pension": 1,
       "has_post_office": 0,
       "has_vehicle": 0,
       "is_taxpayer": 0,
@@ -769,9 +1067,17 @@
     },
     "requirementWeights": {},
     "legalPriority": 10,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "GOVERNMENT_BENEFITS",
     "complexity": "MEDIUM"
   },
@@ -782,7 +1088,7 @@
     "description": "Apply for orphan benefits for minor children",
     "requirementVector": {
       "is_govt_employee": 0,
-      "has_epf": 0,
+      "has_epf": 1,
       "has_property": 0,
       "has_insurance": 0,
       "has_pension": 0,
@@ -794,9 +1100,17 @@
     },
     "requirementWeights": {},
     "legalPriority": 10,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "GOVERNMENT_BENEFITS",
     "complexity": "MEDIUM"
   },
@@ -807,7 +1121,7 @@
     "description": "Update student scholarship with death of parent/guardian",
     "requirementVector": {
       "is_govt_employee": 0,
-      "has_epf": 0,
+      "has_epf": 1,
       "has_property": 0,
       "has_insurance": 0,
       "has_pension": 0,
@@ -819,9 +1133,17 @@
     },
     "requirementWeights": {},
     "legalPriority": 9,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "GOVERNMENT_BENEFITS",
     "complexity": "LOW"
   },
@@ -842,11 +1164,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_insurance": 1 },
+    "requirementWeights": {
+      "has_insurance": 1
+    },
     "legalPriority": 9,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "POLICY_COPY"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "POLICY_COPY"
+    ],
     "category": "FINANCIAL",
     "complexity": "LOW"
   },
@@ -867,11 +1199,21 @@
       "has_mutual_funds": 1,
       "has_loans": 0
     },
-    "requirementWeights": { "has_mutual_funds": 1 },
+    "requirementWeights": {
+      "has_mutual_funds": 1
+    },
     "legalPriority": 11,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "DEMAT_STATEMENT"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "DEMAT_STATEMENT"
+    ],
     "category": "FINANCIAL",
     "complexity": "HIGH"
   },
@@ -889,14 +1231,22 @@
       "has_post_office": 0,
       "has_vehicle": 0,
       "is_taxpayer": 0,
-      "has_mutual_funds": 0,
+      "has_mutual_funds": 1,
       "has_loans": 0
     },
     "requirementWeights": {},
     "legalPriority": 4,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "FD_CERTIFICATE"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "FD_CERTIFICATE"
+    ],
     "category": "FINANCIAL",
     "complexity": "LOW"
   },
@@ -914,14 +1264,22 @@
       "has_post_office": 0,
       "has_vehicle": 0,
       "is_taxpayer": 0,
-      "has_mutual_funds": 0,
+      "has_mutual_funds": 1,
       "has_loans": 0
     },
     "requirementWeights": {},
     "legalPriority": 4,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "MEDIUM"
   },
@@ -940,13 +1298,21 @@
       "has_vehicle": 0,
       "is_taxpayer": 0,
       "has_mutual_funds": 0,
-      "has_loans": 0
+      "has_loans": 1
     },
     "requirementWeights": {},
     "legalPriority": 5,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "LOW"
   },
@@ -967,11 +1333,21 @@
       "has_mutual_funds": 1,
       "has_loans": 0
     },
-    "requirementWeights": { "has_mutual_funds": 1 },
+    "requirementWeights": {
+      "has_mutual_funds": 1
+    },
     "legalPriority": 11,
-    "legalDeadline": { "value": 1, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "ID_PROOF"],
+    "legalDeadline": {
+      "value": 1,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "ID_PROOF"
+    ],
     "category": "FINANCIAL",
     "complexity": "HIGH"
   },
@@ -983,7 +1359,7 @@
     "requirementVector": {
       "is_govt_employee": 0,
       "has_epf": 0,
-      "has_property": 1,
+      "has_property": 0,
       "has_insurance": 0,
       "has_pension": 0,
       "has_post_office": 0,
@@ -992,11 +1368,22 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "is_taxpayer": 2, "has_property": 1 },
+    "requirementWeights": {
+      "is_taxpayer": 2,
+      "has_property": 1
+    },
     "legalPriority": 10,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "BUSINESS_LICENSE"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "BUSINESS_LICENSE"
+    ],
     "category": "BUSINESS",
     "complexity": "MEDIUM"
   },
@@ -1017,11 +1404,21 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "is_taxpayer": 2 },
+    "requirementWeights": {
+      "is_taxpayer": 2
+    },
     "legalPriority": 10,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "PARTNERSHIP_DEED"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "PARTNERSHIP_DEED"
+    ],
     "category": "BUSINESS",
     "complexity": "HIGH"
   },
@@ -1038,15 +1435,25 @@
       "has_pension": 0,
       "has_post_office": 0,
       "has_vehicle": 0,
-      "is_taxpayer": 0,
-      "has_mutual_funds": 1,
+      "is_taxpayer": 1,
+      "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_mutual_funds": 2 },
+    "requirementWeights": {
+      "has_mutual_funds": 2
+    },
     "legalPriority": 11,
-    "legalDeadline": { "value": 6, "unit": "months" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "SHARE_CERTIFICATE"],
+    "legalDeadline": {
+      "value": 6,
+      "unit": "months"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "SHARE_CERTIFICATE"
+    ],
     "category": "FINANCIAL",
     "complexity": "HIGH"
   },
@@ -1058,20 +1465,31 @@
     "requirementVector": {
       "is_govt_employee": 0,
       "has_epf": 0,
-      "has_property": 1,
+      "has_property": 0,
       "has_insurance": 0,
       "has_pension": 0,
       "has_post_office": 0,
       "has_vehicle": 0,
-      "is_taxpayer": 0,
-      "has_mutual_funds": 1,
+      "is_taxpayer": 1,
+      "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_property": 2, "has_mutual_funds": 1 },
+    "requirementWeights": {
+      "has_property": 2,
+      "has_mutual_funds": 1
+    },
     "legalPriority": 2,
-    "legalDeadline": { "value": 2, "unit": "years" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "WILL_COPY"],
+    "legalDeadline": {
+      "value": 2,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "WILL_COPY"
+    ],
     "category": "LEGAL",
     "complexity": "HIGH"
   },
@@ -1090,13 +1508,21 @@
       "has_vehicle": 0,
       "is_taxpayer": 0,
       "has_mutual_funds": 0,
-      "has_loans": 0
+      "has_loans": 1
     },
     "requirementWeights": {},
     "legalPriority": 5,
-    "legalDeadline": { "value": 30, "unit": "days" },
-    "dependencies": ["DEATH_CERT"],
-    "requiredDocTypes": ["DEATH_CERT", "BIRTH_CERTIFICATE"],
+    "legalDeadline": {
+      "value": 30,
+      "unit": "days"
+    },
+    "dependencies": [
+      "DEATH_CERT"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "BIRTH_CERTIFICATE"
+    ],
     "category": "LEGAL",
     "complexity": "HIGH"
   },
@@ -1117,11 +1543,22 @@
       "has_mutual_funds": 0,
       "has_loans": 0
     },
-    "requirementWeights": { "has_insurance": 1 },
+    "requirementWeights": {
+      "has_insurance": 1
+    },
     "legalPriority": 11,
-    "legalDeadline": { "value": 2, "unit": "years" },
-    "dependencies": ["DEATH_CERT", "INSURANCE_CLAIM"],
-    "requiredDocTypes": ["DEATH_CERT", "CLAIM_REJECTION_LETTER"],
+    "legalDeadline": {
+      "value": 2,
+      "unit": "years"
+    },
+    "dependencies": [
+      "DEATH_CERT",
+      "INSURANCE_CLAIM"
+    ],
+    "requiredDocTypes": [
+      "DEATH_CERT",
+      "CLAIM_REJECTION_LETTER"
+    ],
     "category": "LEGAL",
     "complexity": "MEDIUM"
   }

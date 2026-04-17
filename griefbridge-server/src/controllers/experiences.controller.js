@@ -34,7 +34,7 @@ export async function createExperience(req, res, next) {
     const anonymousAuthorId = anonymous
       ? crypto
           .createHash('sha256')
-          .update(`${req.user.id}-${procedureId}`)
+          .update(`${req.userId}-${procedureId}`)
           .digest('hex')
           .substring(0, 8)
       : undefined;

@@ -4,8 +4,12 @@ import { checkDeadlines } from '../services/notification.service.js';
 export function startDeadlineChecker() {
   // Run every hour
   cron.schedule('0 * * * *', async () => {
-    console.log('Running deadline checker job...');
-    await checkDeadlines();
+    try {
+      console.log('Running deadline checker job...');
+      await checkDeadlines();
+    } catch (error) {
+      console.error('Deadline checker job failed:', error);
+    }
   });
 
   // Also run on startup after 5 seconds

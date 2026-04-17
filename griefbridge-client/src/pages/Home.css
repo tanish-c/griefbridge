@@ -6,7 +6,7 @@
 
 /* Advanced Hero Section with Parallax Effect */
 .hero {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, #15202b 100%);
+  background: linear-gradient(135deg, #0f1a26 0%, #164E63 100%);
   color: white;
   padding: 140px 20px 120px;
   text-align: center;
@@ -31,7 +31,7 @@
 .hero::before {
   top: -10%; left: -10%;
   width: 50vw; height: 50vw;
-  background: rgba(43, 107, 127, 0.2);
+  background: rgba(8, 145, 178, 0.2);
 }
 
 .hero::after {
@@ -45,6 +45,12 @@
   0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(5%, 10%) scale(1.05); }
   100% { transform: translate(-5%, 5%) scale(0.95); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .hero::after {
+    animation: none;
+  }
 }
 
 .hero-content {
@@ -61,10 +67,10 @@
 
 .hero-content h1 {
   font-size: 64px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: -1.5px;
-  background: linear-gradient(135deg, #ffffff 0%, var(--accent-gold) 100%);
+  background: linear-gradient(135deg, #ECFEFF 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.1;
@@ -74,7 +80,7 @@
 .hero-content .subtitle {
   font-size: 24px;
   margin-bottom: 25px;
-  color: #e2e8f0;
+  color: #cffafe;
   font-weight: 500;
   letter-spacing: -0.5px;
 }
@@ -83,7 +89,7 @@
   font-size: 18px;
   max-width: 600px;
   margin: 0 auto 40px;
-  color: #cbd5e1;
+  color: #a5f3fc;
   line-height: 1.8;
   font-weight: 400;
 }
@@ -94,10 +100,18 @@
   margin-bottom: 30px;
   filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3));
   transition: transform var(--transition-slow);
+  cursor: pointer;
 }
 
 .hero-logo:hover {
   transform: scale(1.05) rotate(2deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo {
+    transition: none;
+  }
+}
 }
 
 .btn-lg {
@@ -110,12 +124,14 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   display: inline-block;
+  min-height: 44px;
+  cursor: pointer;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, #0891B2 0%, #22D3EE 100%);
   color: white;
-  box-shadow: 0 10px 25px rgba(25, 74, 90, 0.3);
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.3);
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -125,9 +141,18 @@
 
 .btn-primary:hover {
   transform: translateY(-4px) scale(1.04);
-  box-shadow: 0 15px 35px rgba(25, 74, 90, 0.5);
-  background: linear-gradient(135deg, var(--primary-light) 0%, #3a8199 100%);
+  box-shadow: 0 15px 35px rgba(8, 145, 178, 0.5);
+  background: linear-gradient(135deg, #0369a1 0%, #06b6d4 100%);
   color: white;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+.btn-primary:active {
+  transform: translateY(-2px) scale(1.02);
 }
 
 .problem {
@@ -146,7 +171,7 @@
 .problem h2, .how-it-works h2, .testimonials h2, .cta h2 {
   text-align: center;
   font-size: 42px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 60px;
   color: var(--text-dark);
   letter-spacing: -1px;
@@ -157,7 +182,7 @@
   display: block;
   width: 80px;
   height: 5px;
-  background: linear-gradient(90deg, var(--primary), var(--accent-gold));
+  background: linear-gradient(90deg, #0891B2, #059669);
   margin: 20px auto 0;
   border-radius: 5px;
 }
@@ -184,19 +209,25 @@
   transition: all var(--transition-normal);
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .problem-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
-  border-color: rgba(43, 107, 127, 0.1);
-  background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%);
+  border-color: rgba(8, 145, 178, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.problem-card:focus-within {
+  outline: 2px solid #0891B2;
+  outline-offset: 2px;
 }
 
 .problem-card-title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
-  color: var(--primary-dark);
+  color: #0891B2;
   margin-bottom: 8px;
 }
 
@@ -228,7 +259,8 @@
   position: relative;
   z-index: 1;
   box-shadow: var(--shadow-md);
-  transition: transform var(--transition-normal);
+  transition: all var(--transition-normal);
+  cursor: pointer;
 }
 
 .step:hover {
@@ -236,25 +268,30 @@
   box-shadow: var(--shadow-lg);
 }
 
+.step:focus-within {
+  outline: 2px solid #0891B2;
+  outline-offset: 4px;
+}
+
 .step-number {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  background: linear-gradient(135deg, #0891B2, #22D3EE);
   color: white;
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   margin: -80px auto 25px;
-  box-shadow: 0 10px 20px rgba(43, 107, 127, 0.3);
+  box-shadow: 0 10px 20px rgba(8, 145, 178, 0.3);
   border: 6px solid white;
 }
 
 .step h3 {
   font-size: 22px;
-  color: var(--primary-dark);
+  color: #0891B2;
   margin-bottom: 12px;
 }
 
@@ -281,11 +318,17 @@
   position: relative;
   transition: all var(--transition-normal);
   border: 1px solid var(--border-light);
+  cursor: pointer;
 }
 
 .testimonial-card:hover {
   box-shadow: var(--shadow-md);
   background: white;
+}
+
+.testimonial-card:focus-within {
+  outline: 2px solid #0891B2;
+  outline-offset: 2px;
 }
 
 .testimonial-text {
@@ -299,8 +342,8 @@
 }
 
 .testimonial-author {
-  font-weight: 700;
-  color: var(--primary);
+  font-weight: 600;
+  color: #0891B2;
   font-size: 16px;
 }
 
@@ -312,7 +355,7 @@
 
 .cta {
   padding: 120px 20px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, #0891B2 0%, #0369a1 100%);
   color: white;
   text-align: center;
   position: relative;

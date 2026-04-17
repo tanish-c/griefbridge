@@ -7,30 +7,32 @@ const LEGAL_PRIORITY_ORDER = [
 ];
 
 export async function matchProcedures(intakeAnswers, dateOfDeath) {
+  console.log('🔵 [IR] Fetching procedures from Procedure collection...');
   const corpus = await Procedure.find({});
+  console.log('🔵 [IR] Found', corpus.length, 'procedures');
   const scored = [];
 
   for (const proc of corpus) {
     const reqVector = proc.requirementVector;
-    const weights = proc.requirementWeights || {};
-    let score = 0, totalWeight = 0;
-
+    
+    // STRICTER MATCHING: Check if ALL required conditions are met
+    // If a field is required (value=1), the user MUST have selected it
+    let allRequiredConditionsMet = true;
     for (const [key, required] of Object.entries(reqVector)) {
-      const weight = weights[key] || 1;
-      totalWeight += weight;
-      if (required === 0) {
-        score += weight;
-        continue;
-      }
-      if (intakeAnswers[key] === true) {
-        score += weight;
+      if (required === 1 && intakeAnswers[key] !== true) {
+        allRequiredConditionsMet = false;
+        console.log(`  └─ ${proc.procedureId} skipped: requires ${key} but not selected`);
+        break;
       }
     }
-
-    const normScore = totalWeight > 0 ? score / totalWeight : 0;
-    if (normScore >= 0.5) scored.push({ proc, normScore });
+    
+    // Only include procedures where all required conditions are satisfied
+    if (allRequiredConditionsMet) {
+      scored.push({ proc, normScore: 1 });
+    }
   }
 
+  console.log('🔵 [IR] Procedures matched (with all required conditions met):', scored.length);
   scored.sort((a, b) => {
     const pa = LEGAL_PRIORITY_ORDER.indexOf(a.proc.procedureId);
     const pb = LEGAL_PRIORITY_ORDER.indexOf(b.proc.procedureId);
@@ -40,7 +42,7 @@ export async function matchProcedures(intakeAnswers, dateOfDeath) {
     return b.normScore - a.normScore;
   });
 
-  return scored.map(({ proc }) => ({
+  const result = scored.map(({ proc }) => ({
     procedureId: proc.procedureId,
     title: proc.title,
     department: proc.department,
@@ -51,14 +53,28 @@ export async function matchProcedures(intakeAnswers, dateOfDeath) {
     requiredDocTypes: proc.requiredDocTypes || [],
     formTemplateId: proc.formTemplateId || null
   }));
+  
+  console.log('🔵 [IR] Procedures ready for return:', result.length);
+  return result;
 }
 
 function calculateDeadline(rule, dateOfDeath) {
   if (!rule || !dateOfDeath) return null;
-  const base = new Date(dateOfDeath);
-  const { value, unit } = rule;
-  if (unit === 'days') base.setDate(base.getDate() + value);
-  if (unit === 'months') base.setMonth(base.getMonth() + value);
-  if (unit === 'years') base.setFullYear(base.getFullYear() + value);
-  return base;
+  
+  try {
+    const base = new Date(dateOfDeath);
+    if (isNaN(base.getTime())) return null; // Invalid date
+    
+    const { value, unit } = rule;
+    if (!value || !unit) return null;
+    
+    if (unit === 'days') base.setDate(base.getDate() + value);
+    else if (unit === 'months') base.setMonth(base.getMonth() + value);
+    else if (unit === 'years') base.setFullYear(base.getFullYear() + value);
+    
+    return base;
+  } catch (e) {
+    console.error('Error calculating deadline:', e);
+    return null;
+  }
 }

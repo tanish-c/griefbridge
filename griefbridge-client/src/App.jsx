@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import LoginForm from './components/auth/LoginForm';
 import RegisterForm from './components/auth/RegisterForm';
 import Dashboard from './pages/Dashboard';
+import { ChatWidget } from './components/ChatWidget';
 import './App.css';
 import Intro from './components/Intro';
 
@@ -27,21 +28,29 @@ function ProtectedRoute({ children }) {
 }
 
 function AppRoutes() {
+  const authContext = useContext(AuthContext);
+  
+  // Check if user is authenticated AND loading is complete
+  const isAuthenticated = authContext?.user !== null && authContext?.user !== undefined && authContext?.loading === false;
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<LoginForm />} />
-      <Route path="/register" element={<RegisterForm />} />
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      {isAuthenticated && <ChatWidget />}
+    </>
   );
 }
 

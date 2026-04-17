@@ -4,12 +4,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 20% 10%, rgba(43, 107, 127, 0.15), transparent 40%),
+  background: radial-gradient(circle at 20% 10%, rgba(8, 145, 178, 0.15), transparent 40%),
               radial-gradient(circle at 80% 90%, rgba(212, 165, 116, 0.1), transparent 40%),
-              linear-gradient(135deg, #0f172a 0%, #071027 100%);
+              linear-gradient(135deg, #0f1a26 0%, #164E63 100%);
   z-index: 9999;
   backdrop-filter: blur(6px);
-  animation: introFadeIn 400ms ease-out;
+  animation: introFadeIn var(--transition-normal) ease-out;
 }
 
 @keyframes introFadeIn {
@@ -20,6 +20,12 @@
   to {
     opacity: 1;
     backdrop-filter: blur(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay {
+    animation: none;
   }
 }
 
@@ -38,6 +44,13 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-content {
+    animation: none;
+    opacity: 1;
   }
 }
 
@@ -65,12 +78,18 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .intro-logo-img {
+    animation: none;
+  }
+}
+
 .intro-title {
   font-size: 32px;
   font-weight: 800;
   color: #f8fafc;
   letter-spacing: 0.8px;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #ECFEFF 0%, #cffafe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -78,7 +97,7 @@
 
 .intro-tag {
   margin-top: 12px;
-  color: rgba(226, 232, 240, 0.9);
+  color: rgba(207, 250, 254, 0.95);
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -90,12 +109,26 @@
   to { opacity: 1; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .intro-tag {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 .intro-loader {
   margin-top: 24px;
   display: flex;
   gap: 10px;
   justify-content: center;
   animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-loader {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .intro-loader span {

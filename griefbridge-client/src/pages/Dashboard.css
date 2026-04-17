@@ -20,7 +20,7 @@
 
 .navbar-brand h2 {
   margin: 0;
-  color: var(--primary-dark);
+  color: #0891B2;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -39,6 +39,18 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.user-name:hover {
+  background: #f0f9ff;
+}
+
+.user-name:focus-within {
+  outline: 2px solid #0891B2;
 }
 
 .user-name::before {
@@ -46,7 +58,7 @@
   display: inline-block;
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  background: linear-gradient(135deg, #0891B2, #22D3EE);
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -78,24 +90,31 @@
   margin: 0;
   color: var(--text-dark);
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -1px;
 }
 
 .completion-badge {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, #0891B2 0%, #0369a1 100%);
   color: white;
   padding: 20px 32px;
   border-radius: 16px;
   text-align: center;
   min-width: 180px;
-  box-shadow: 0 10px 25px rgba(30, 82, 100, 0.3);
-  transition: transform var(--transition-normal);
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.3);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  user-select: none;
 }
 
 .completion-badge:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(30, 82, 100, 0.4);
+  box-shadow: 0 15px 35px rgba(8, 145, 178, 0.4);
+}
+
+.completion-badge:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
 }
 
 .completion-percent {
@@ -295,6 +314,31 @@
   width: 18px;
   height: 18px;
   accent-color: var(--primary);
+}
+
+.radio-button {
+  padding: 12px 28px;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  background: white;
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 100px;
+  text-align: center;
+}
+
+.radio-button:hover {
+  border-color: var(--primary-light);
+  background: rgba(43, 107, 127, 0.05);
+}
+
+.radio-button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
 }
 
 .intake-nav {
