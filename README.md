@@ -42,6 +42,8 @@ When someone dies in India, their family faces an overwhelming administrative bu
 - Animated state transitions using Framer Motion & GSAP
 - Click-to-detail side panel showing full task information
 - Particle animations on task completion
+- **Accessibility Features:** Help button with interactive tutorials, keyboard shortcuts (Escape, Tab, Enter), color-coded legend, screen reader support, ARIA labels, and text alternatives for visual elements
+- Supports users of all ages and technical abilities
 
 ### 4. Document Vault
 - Drag-and-drop file upload (PDF, JPG, PNG)
@@ -72,6 +74,12 @@ When someone dies in India, their family faces an overwhelming administrative bu
 - Automatic notification creation for overdue items
 - AJAX polling (60s interval) for real-time updates
 - Bell icon with unread badge count
+
+### 9. Home Page with Self-Help Resources
+- **Frequently Asked Questions (FAQ)** - 8 comprehensive questions covering common concerns about timelines, documents, procedures, security, and tracking
+- **Government Quick Links** - 12 direct links to key Indian government portals and services (National Portal, EPFO, Income Tax, RTO, Banks, Insurance, Pension, etc.) organized by category
+- Expandable FAQ with smooth animations and accessibility focus
+- Hover-activated government link cards with status badges and contact categories
 
 ## Project Structure
 
@@ -200,14 +208,18 @@ npm run dev
 ### First Run
 
 1. Open browser to `http://localhost:5173`
-2. Click **"Start Free"** or navigate to `/register`
-3. Create an account with your email and password
-4. Complete the **13-step intake questionnaire** (takes ~5 minutes)
-5. View your **personalized dependency graph** showing all relevant procedures
-6. Click any node to see detailed task information
-7. Mark tasks complete to see animations and unlock dependent tasks
-8. Upload documents to your secure vault
-9. Export your case as XML or PDF for archived records
+2. **Explore the Home Page** - Browse FAQs to understand the platform better, or jump to government links for quick access to official portals
+3. Click **"Start Free"** or navigate to `/register`
+4. Create an account with your email and password
+5. Complete the **13-step intake questionnaire** (takes ~5 minutes)
+6. View your **personalized dependency graph** showing all relevant procedures
+   - Click the **"?"** help button to see tutorials and keyboard shortcuts
+   - Use the color legend to understand task status at a glance
+   - Navigate with keyboard (Tab to move between tasks, Escape to close panels)
+7. Click any node to see detailed task information
+8. Mark tasks complete to see animations and unlock dependent tasks
+9. Upload documents to your secure vault
+10. Export your case as XML or PDF for archived records
 
 **What happens behind the scenes:** The intake questionnaire captures key information about the deceased and family circumstances. Our weighted matching algorithm analyzes this against 40+ procedures to create your personalized workflow—no generic lists, just what's actually relevant to you.
 
@@ -480,6 +492,41 @@ This ensures personalized procedure lists based on deceased's profile and family
 - Firefox: ✅ Full support
 - Safari: ✅ Full support (12+)
 - IE11: ⚠️ Requires polyfills (not recommended)
+
+## Accessibility Features
+
+GriefBridge is designed to be inclusive and usable by people of all ages and abilities:
+
+### Visual Accessibility
+- Color-coded task status legend (with color names, not just colors)
+- High contrast text and buttons for WCAG AA compliance
+- Readable font sizes and line heights throughout
+- Animations respect `prefers-reduced-motion` system preference
+
+### Keyboard Navigation
+- Full keyboard support with Tab, Shift+Tab, Enter, and Escape
+- Visible focus indicators on all interactive elements
+- Keyboard shortcuts for common tasks
+- Keyboard accessible modals and dropdown menus
+
+### Screen Reader Support
+- ARIA labels on all buttons and interactive elements
+- Semantic HTML structure (`<button>`, `<details>`, roles)
+- Text alternatives for visual information (legends, descriptions)
+- Screen reader-only content for task lists and guides
+
+### User Guidance
+- Interactive help system with "?" button on dashboard
+- Beginner-friendly tutorials on first visit
+- Detailed task descriptions in plain language
+- FAQ section answering common questions
+- Hover tooltips explaining government links and categories
+
+### Special Considerations
+- Support for users with limited technical experience
+- Simple, clear language avoiding jargon where possible
+- Consistent UI patterns throughout the application
+- Mobile-responsive design for accessibility on all devices
 
 ## Security Measures
 
